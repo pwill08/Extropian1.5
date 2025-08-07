@@ -1,0 +1,23 @@
+<Shell
+    x:Class="Extropian.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Extropian.Pages"
+    xmlns:local="clr-namespace:Extropian"
+    Title="Extropian">
+
+    <!-- Login Page -->
+    <ShellContent Route="login" ContentTemplate="{DataTemplate local:MainPage}" />
+
+    <!-- SignUp page -->
+    <ShellContent Route="signup" ContentTemplate="{DataTemplate pages:SignUp}" />
+
+    <!-- TabBar that appears after login -->
+    <TabBar Route="dashboard">
+        <ShellContent Title="Dashboard" Icon="dashboard.png" ContentTemplate="{DataTemplate pages:Dashboard}" />
+        <ShellContent Title="Session"   Icon="session.png"   ContentTemplate="{DataTemplate pages:Session}" />
+        <ShellContent Title="Social"    Icon="social.png"    ContentTemplate="{DataTemplate pages:Social}" />
+        <ShellContent Title="Settings"  Icon="settings.png"  ContentTemplate="{DataTemplate pages:Settings}" />
+    </TabBar>
+
+</Shell>

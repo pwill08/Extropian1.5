@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Extropian.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label Text="Extropian" />
+
+            <Label Text="User ID:" />
+            <Entry x:Name="UserIdEntry" />
+
+            <Label Text="Password:" />
+            <Entry x:Name="PasswordEntry" IsPassword="True"/>
+
+            <Button Text="Sign in" Clicked="OnSignInClicked"/>
+
+            <Button Text="Sign Up" Clicked="OnSignUpClicked"/>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,85 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net9.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Extropian
+build_property.ProjectDir = C:\Users\Patrick\Desktop\Extropian\Gen1.5\MAUI_App\Extropian\Extropian\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Patrick/Desktop/Extropian/Gen1.5/MAUI_App/Extropian/Extropian/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Extropian.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/Patrick/Desktop/Extropian/Gen1.5/MAUI_App/Extropian/Extropian/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Extropian.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/Patrick/Desktop/Extropian/Gen1.5/MAUI_App/Extropian/Extropian/ContentViews/DashboardCard.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Extropian.ContentViews.DashboardCard.xaml
+build_metadata.AdditionalFiles.TargetPath = ContentViews\DashboardCard.xaml
+build_metadata.AdditionalFiles.RelativePath = ContentViews\DashboardCard.xaml
+
+[C:/Users/Patrick/Desktop/Extropian/Gen1.5/MAUI_App/Extropian/Extropian/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Extropian.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/Patrick/Desktop/Extropian/Gen1.5/MAUI_App/Extropian/Extropian/Pages/Dashboard.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Extropian.Pages.Dashboard.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Dashboard.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Dashboard.xaml
+
+[C:/Users/Patrick/Desktop/Extropian/Gen1.5/MAUI_App/Extropian/Extropian/Pages/Session.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Extropian.Pages.Session.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Session.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Session.xaml
+
+[C:/Users/Patrick/Desktop/Extropian/Gen1.5/MAUI_App/Extropian/Extropian/Pages/Settings.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Extropian.Pages.Settings.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Settings.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Settings.xaml
+
+[C:/Users/Patrick/Desktop/Extropian/Gen1.5/MAUI_App/Extropian/Extropian/Pages/SignUp.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Extropian.Pages.SignUp.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\SignUp.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\SignUp.xaml
+
+[C:/Users/Patrick/Desktop/Extropian/Gen1.5/MAUI_App/Extropian/Extropian/Pages/Social.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Extropian.Pages.Social.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Social.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Social.xaml
+
+[C:/Users/Patrick/Desktop/Extropian/Gen1.5/MAUI_App/Extropian/Extropian/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Extropian.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/Patrick/Desktop/Extropian/Gen1.5/MAUI_App/Extropian/Extropian/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Extropian.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

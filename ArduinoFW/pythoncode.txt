@@ -1,0 +1,339 @@
+
+import asyncio
+import struct
+from bleak import BleakScanner, BleakClient
+
+DEVICE_NAME = "Extropian"
+SERVICE_UUID = "12345678-1234-5678-1234-56789abcdef0"
+COMMAND_CHAR_UUID = "12345678-1234-5678-1234-56789abcdef1"
+DATA_CHAR_UUID = "12345678-1234-5678-1234-56789abcdef2"
+THRESHOLD_CHAR_UUID = "12345678-1234-5678-1234-56789abcdef3"
+
+adapters = {}             # address -> BleakClient
+received_packets = {}     # address -> list of raw packets
+packet_events = {}        # address -> asyncio.Queue
+
+# --------- BLE Packet Parsing ---------
+def parse_packet(data: bytearray):
+    if len(data) != 221:
+        print(f"⚠️ Invalid packet length: {len(data)} bytes")
+        return
+
+    packet_num = data[0]
+    offset = 1
+    print(f"\n📦 Packet #{packet_num}")
+
+    for s in range(5):
+        if data[offset] != ord('A'):
+            print("❌ Format error: Missing 'A' marker")
+            return
+        offset += 1
+        ts = struct.unpack_from("<I", data, offset)[0]
+        offset += 4
+
+        if data[offset] != ord('B'):
+            print("❌ Format error: Missing 'B' marker")
+            return
+        offset += 1
+        ax, ay, az = struct.unpack_from("<fff", data, offset)
+        offset += 12
+
+        if data[offset] != ord('C'):
+            print("❌ Format error: Missing 'C' marker")
+            return
+        offset += 1
+        gx, gy, gz = struct.unpack_from("<fff", data, offset)
+        offset += 12
+
+        if data[offset] != ord('D'):
+            print("❌ Format error: Missing 'D' marker")
+            return
+        offset += 1
+        mx, my, mz = struct.unpack_from("<fff", data, offset)
+        offset += 12
+
+        print(f"  Sample {s+1}: TS={ts}")
+        print(f"    Accel (m/s²): {ax:.3f}, {ay:.3f}, {az:.3f}")
+        print(f"    Gyro  (°/s):  {gx:.3f}, {gy:.3f}, {gz:.3f}")
+        print(f"    Mag   (uT):   {mx:.3f}, {my:.3f}, {mz:.3f}")
+
+# --------- Notification Handlers ---------
+def make_parse_packet(address):
+    def parser(_, data: bytearray):
+        parse_packet(data)
+        received_packets[address].append(data)
+        packet_events[address].put_nowait(None)
+    return parser
+
+def make_handle_threshold(address):
+    def handler(_, data: bytearray):
+        if data and data[0] == 0x05:
+            print(f"✅ Threshold hit on {address}")
+            asyncio.create_task(trigger_freeze_on_both(address))
+    return handler
+
+# --------- Send Commands to Devices ---------
+async def send_queue_from_device(address):
+    received_packets[address] = []
+    await adapters[address].write_gatt_char(COMMAND_CHAR_UUID, b'\x04')
+
+    for _ in range(21):  # Expecting 21 packets
+        try:
+            await asyncio.wait_for(packet_events[address].get(), timeout=2.0)
+        except asyncio.TimeoutError:
+            print(f"⚠️ Timeout waiting for packets from {address}")
+            break
+
+async def trigger_freeze_on_both(triggered_address):
+    print("🧊 Sending 0x03 (copy queue) to both devices...")
+    await asyncio.gather(*(client.write_gatt_char(COMMAND_CHAR_UUID, b'\x03') for client in adapters.values()))
+    await asyncio.sleep(0.5)
+
+    print(f"📤 Sending queue from triggered device: {triggered_address}")
+    await send_queue_from_device(triggered_address)
+
+    other = next(addr for addr in adapters if addr != triggered_address)
+    print(f"📤 Sending queue from other device: {other}")
+    await send_queue_from_device(other)
+
+# --------- Main BLE Setup ---------
+async def main():
+    print("🔍 Scanning for Extropian devices...")
+    devices = await BleakScanner.discover(timeout=5.0)
+    targets = [d for d in devices if d.name == DEVICE_NAME]
+
+    if len(targets) < 2:
+        print("❌ Need at least two Extropian devices")
+        return
+
+    # Connect to two devices
+    for target in targets[:2]:
+        client = BleakClient(target.address)
+        await client.connect()
+        if not client.is_connected:
+            print(f"❌ Could not connect to {target.address}")
+            continue
+
+        adapters[target.address] = client
+        received_packets[target.address] = []
+        packet_events[target.address] = asyncio.Queue()
+
+        await client.start_notify(DATA_CHAR_UUID, make_parse_packet(target.address))
+        await client.start_notify(THRESHOLD_CHAR_UUID, make_handle_threshold(target.address))
+
+    print(f"🔗 Connected to: {list(adapters.keys())}")
+
+
+    print("🚀 Sending 0x02 (reset Clock) to all devices...")
+    await asyncio.gather(*(client.write_gatt_char(COMMAND_CHAR_UUID, b'\x02') for client in adapters.values()))
+
+    # Start IMU collection on both
+    print("🚀 Sending 0x01 (start IMU) to all devices...")
+    await asyncio.gather(*(client.write_gatt_char(COMMAND_CHAR_UUID, b'\x01') for client in adapters.values()))
+
+    print("📡 Waiting for threshold triggers (Ctrl+C to stop)...")
+    try:
+        while True:
+            await asyncio.sleep(0.5)
+    except KeyboardInterrupt:
+        print("🛑 Interrupted by user. Disconnecting...")
+
+    # Clean up
+    for client in adapters.values():
+        await client.stop_notify(DATA_CHAR_UUID)
+        await client.stop_notify(THRESHOLD_CHAR_UUID)
+        await client.disconnect()
+    print("✅ Disconnected from all devices.")
+
+# --------- Run Main ---------
+if __name__ == "__main__":
+    asyncio.run(main())
+
+
+
+# import asyncio
+# import struct
+# import time
+# from datetime import datetime
+# from bleak import BleakScanner, BleakClient
+
+# DEVICE_NAME = "Extropian"
+# SERVICE_UUID = "12345678-1234-5678-1234-56789abcdef0"
+# COMMAND_CHAR_UUID = "12345678-1234-5678-1234-56789abcdef1"
+# DATA_CHAR_UUID = "12345678-1234-5678-1234-56789abcdef2"
+# THRESHOLD_CHAR_UUID = "12345678-1234-5678-1234-56789abcdef3"
+
+# adapters = {}             # address -> BleakClient
+# received_packets = {}     # address -> list of raw packets
+# packet_events = {}        # address -> asyncio.Queue
+
+# # --------- BLE Packet Parsing ---------
+# def parse_packet(data: bytearray):
+#     if len(data) != 221:
+#         print(f"⚠️ Invalid packet length: {len(data)} bytes")
+#         return
+#     packet_num = data[0]
+#     offset = 1
+#     print(f"\n📦 Packet #{packet_num}")
+#     for s in range(5):
+#         if data[offset] != ord('A'):
+#             print("❌ Format error: Missing 'A' marker")
+#             return
+#         offset += 1
+#         ts = struct.unpack_from("<I", data, offset)[0]
+#         offset += 4
+#         if data[offset] != ord('B'):
+#             print("❌ Format error: Missing 'B' marker")
+#             return
+#         offset += 1
+#         ax, ay, az = struct.unpack_from("<fff", data, offset)
+#         offset += 12
+#         if data[offset] != ord('C'):
+#             print("❌ Format error: Missing 'C' marker")
+#             return
+#         offset += 1
+#         gx, gy, gz = struct.unpack_from("<fff", data, offset)
+#         offset += 12
+#         if data[offset] != ord('D'):
+#             print("❌ Format error: Missing 'D' marker")
+#             return
+#         offset += 1
+#         mx, my, mz = struct.unpack_from("<fff", data, offset)
+#         offset += 12
+#         print(f"  Sample {s+1}: TS={ts}")
+#         print(f"    Accel (m/s²): {ax:.3f}, {ay:.3f}, {az:.3f}")
+#         print(f"    Gyro  (°/s):  {gx:.3f}, {gy:.3f}, {gz:.3f}")
+#         print(f"    Mag   (uT):   {mx:.3f}, {my:.3f}, {mz:.3f}")
+
+# # --------- Notification Handlers ---------
+# def make_parse_packet(address):
+#     def parser(_, data: bytearray):
+#         received_packets[address].append(data)
+#         packet_events[address].put_nowait(None)
+#     return parser
+
+# def make_handle_threshold(address):
+#     def handler(_, data: bytearray):
+#         if data and data[0] == 0x05:
+#             print(f"✅ Threshold hit on {address}")
+#             asyncio.create_task(trigger_freeze_on_both(address))
+#     return handler
+
+# # --------- Send Commands to Devices ---------
+# async def send_queue_from_device(address):
+#     received_packets[address] = []
+#     try:
+#         await adapters[address].write_gatt_char(COMMAND_CHAR_UUID, b'\x04')
+#         print(f"Sent CMD_SEND_QUEUE (0x04) to {address}")
+#     except Exception as e:
+#         print(f"⚠️ Failed to send CMD_SEND_QUEUE to {address}: {e}")
+#         return
+#     for _ in range(21):  # Expecting 21 packets
+#         try:
+#             await asyncio.wait_for(packet_events[address].get(), timeout=2.0)
+#         except asyncio.TimeoutError:
+#             print(f"⚠️ Timeout waiting for packets from {address}")
+#             break
+#     print(f"✅ Finished receiving from {address} — now parsing...")
+#     for packet in received_packets[address]:
+#         parse_packet(packet)
+
+# async def trigger_freeze_on_both(triggered_address):
+#     print("🧊 Sending 0x03 (copy queue) to both devices...")
+#     try:
+#         await asyncio.gather(*(client.write_gatt_char(COMMAND_CHAR_UUID, b'\x03') for client in adapters.values()))
+#         print("✅ Sent CMD_COPY_QUEUE (0x03) to all devices")
+#     except Exception as e:
+#         print(f"⚠️ Failed to send CMD_COPY_QUEUE: {e}")
+#         return
+#     await asyncio.sleep(0.5)
+#     print(f"📤 Sending queue from triggered device: {triggered_address}")
+#     await send_queue_from_device(triggered_address)
+#     other = next(addr for addr in adapters if addr != triggered_address)
+#     print(f"📤 Sending queue from other device: {other}")
+#     await send_queue_from_device(other)
+
+# # --------- Main BLE Setup ---------
+# async def main():
+#     print("🔍 Scanning for Extropian devices...")
+#     devices = await BleakScanner.discover(timeout=5.0)
+#     targets = [d for d in devices if d.name == DEVICE_NAME]
+#     if len(targets) < 2:
+#         print("❌ Need at least two Extropian devices")
+#         return
+
+#     # Connect to two devices
+#     for target in targets[:2]:
+#         client = BleakClient(target.address)
+#         try:
+#             await client.connect()
+#             if not client.is_connected:
+#                 print(f"❌ Could not connect to {target.address}")
+#                 continue
+#             adapters[target.address] = client
+#             received_packets[target.address] = []
+#             packet_events[target.address] = asyncio.Queue()
+#             await client.start_notify(DATA_CHAR_UUID, make_parse_packet(target.address))
+#             await client.start_notify(THRESHOLD_CHAR_UUID, make_handle_threshold(target.address))
+#             print(f"✅ Connected and notifications set up for {target.address}")
+#         except Exception as e:
+#             print(f"❌ Failed to set up {target.address}: {e}")
+#             continue
+
+#     if len(adapters) < 2:
+#         print("❌ Failed to connect to two devices")
+#         return
+
+#     print(f"🔗 Connected to: {list(adapters.keys())}")
+
+#     # Wait briefly to ensure connections are stable
+#     await asyncio.sleep(1.0)
+
+#     # Calculate milliseconds since midnight
+#     now = datetime.now()
+#     midnight = now.replace(hour=0, minute=0, second=0, microsecond=0)
+#     ms_since_midnight = int((now - midnight).total_seconds() * 1000) & 0xFFFFFFFF
+#     print(f"Setting clocks to {ms_since_midnight} ms")
+#     # Pack as 5-byte payload: 1 byte cmd (0x02) + 4-byte little-endian unsigned int
+#     clock_reset_cmd = bytes([0x02]) + struct.pack("<I", ms_since_midnight)
+#     print(f"Sending clock reset command: {clock_reset_cmd.hex()}")
+
+#     # Send to both devices with retries
+#     for attempt in range(3):  # Retry up to 3 times
+#         try:
+#             await asyncio.gather(*(client.write_gatt_char(COMMAND_CHAR_UUID, clock_reset_cmd) for client in adapters.values()))
+#             print(f"✅ Clock reset command sent successfully (attempt {attempt + 1})")
+#             break
+#         except Exception as e:
+#             print(f"⚠️ Failed to send clock reset command (attempt {attempt + 1}): {e}")
+#             await asyncio.sleep(0.3)
+#     else:
+#         print("❌ Failed to send clock reset command after 3 attempts")
+
+#     # Start IMU collection on both
+#     print("🚀 Sending 0x01 (start IMU) to all devices...")
+#     try:
+#         await asyncio.gather(*(client.write_gatt_char(COMMAND_CHAR_UUID, b'\x01') for client in adapters.values()))
+#         print("✅ Sent CMD_START_IMU (0x01) to all devices")
+#     except Exception as e:
+#         print(f"⚠️ Failed to send CMD_START_IMU: {e}")
+
+#     print("📡 Waiting for threshold triggers (Ctrl+C to stop)...")
+#     try:
+#         while True:
+#             await asyncio.sleep(0.5)
+#     except KeyboardInterrupt:
+#         print("🛑 Interrupted by user. Disconnecting...")
+#     # Clean up
+#     for client in adapters.values():
+#         try:
+#             await client.stop_notify(DATA_CHAR_UUID)
+#             await client.stop_notify(THRESHOLD_CHAR_UUID)
+#             await client.disconnect()
+#         except Exception as e:
+#             print(f"⚠️ Error during cleanup: {e}")
+#     print("✅ Disconnected from all devices.")
+
+# # --------- Run Main ---------
+# if __name__ == "__main__":
+#     asyncio.run(main())

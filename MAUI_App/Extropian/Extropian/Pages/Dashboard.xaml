@@ -1,0 +1,29 @@
+<ContentPage 
+    x:Class="Extropian.Pages.Dashboard"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:Extropian.ContentViews">
+
+
+    <ScrollView>
+
+        <VerticalStackLayout x:Name="CardContainer" Padding="16">
+            <!-- Cards will be added here dynamically -->
+        </VerticalStackLayout>
+        
+        
+        <!--<VerticalStackLayout Padding="16">
+            <views:DashboardCard 
+                Title="Session1"
+                Description="blah blah blah blah"
+                ImageSource="session.png"
+                Tapped="OnCardTapped"/>
+
+            <views:DashboardCard 
+                Title="Session2"
+                Description="coca cola"
+                ImageSource="social.png"
+                Tapped="OnCardTapped"/>
+        </VerticalStackLayout>-->
+    </ScrollView>
+</ContentPage>

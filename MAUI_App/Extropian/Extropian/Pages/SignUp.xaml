@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Extropian.Pages.SignUp"
+             Title="SignUp">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="Sign Up" />
+
+
+            <Label Text="User ID:" />
+            <Entry x:Name="UserIdEntry"  
+                   TextChanged="EntryField_ParseSpaces"
+                   />
+
+            <Label Text="Password:" />
+            <Entry x:Name="PasswordEntry" IsPassword="True"/>
+
+            <Label Text="Re-Enter Password:" />
+            <Entry x:Name="ReEnterPasswordEntry" IsPassword="True"/>
+
+
+
+            <Label Text="Age:" />
+            <Entry x:Name="AgeEntry"
+                   Keyboard="Numeric"/>
+
+            <Label Text="Gender:" />
+            <HorizontalStackLayout>
+                <RadioButton Content="Male" GroupName="GenderGroup" x:Name="GenderMaleRadio" />
+                <RadioButton Content="Female" GroupName="GenderGroup" x:Name="GenderFemaleRadio" />
+            </HorizontalStackLayout>
+
+
+            <Label Text="Ethnicity:" />
+            <Picker x:Name="EthnicityPicker">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>American Indian or Alaska Native</x:String>
+                        <x:String>Asian</x:String>
+                        <x:String>Black</x:String>
+                        <x:String>Hispanic</x:String>
+                        <x:String>Native Hawaiian or Other Pacific Islander</x:String>
+                        <x:String>White</x:String>
+                        <x:String>Other</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+
+            <Label Text="Height (in.):" />
+            <Entry x:Name="HeightEntry" 
+                   Keyboard="Numeric"/>
+
+            <Label Text="Weight:" />
+            <Entry x:Name="WeightEntry" 
+                   Keyboard="Numeric"/>
+
+            <Label Text="Handedness:" />
+            <HorizontalStackLayout>
+                <RadioButton Content="Right" GroupName="HandednessGroup" x:Name="RightHandedRadio" />
+                <RadioButton Content="Left" GroupName="HandednessGroup" x:Name="LeftHandedRadio" />
+            </HorizontalStackLayout>
+
+
+            <Label Text="Handicap:" />
+            <Entry x:Name="HandicapEntry"
+                Keyboard="Numeric"/>
+
+            <Label Text="Skill Level:" />
+            <Label x:Name="SkillLevelSliderValue" Text="5" HorizontalOptions="Center" />
+
+            <Slider x:Name="SkillLevelSlider"
+                Minimum="1"
+                Maximum="10"
+                Value="5"
+                ValueChanged="OnSkillLevelChanged"
+                ThumbColor="DarkBlue"
+                MaximumTrackColor="LightGray"
+                MinimumTrackColor="Blue" />
+
+
+            <Button Text="Sign Up"
+                    Clicked="OnSignUp_ButtonClicked"
+                    />
+
+
+
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
