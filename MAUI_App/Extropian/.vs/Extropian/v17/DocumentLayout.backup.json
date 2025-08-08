@@ -3,6 +3,62 @@
   "WorkspaceRootPath": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\pages\\connect.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\pages\\connect.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\pages\\connect.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\pages\\connect.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\pages\\session.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\pages\\session.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\platforms\\android\\androidmanifest.xml||{4E01A4BC-CFCF-452C-8C08-51352512D197}",
+      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\platforms\\android\\androidmanifest.xml||{4E01A4BC-CFCF-452C-8C08-51352512D197}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\platforms\\android\\mainapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\platforms\\android\\mainapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\classes\\devices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\classes\\devices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\classes\\blemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\classes\\blemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\pages\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\pages\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\pages\\session.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\pages\\session.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\pages\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\pages\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,8 +67,8 @@
       "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\contentviews\\dashboardcard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\pages\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\pages\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\classes\\swingdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\classes\\swingdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\classes\\firestoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,14 +79,6 @@
       "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\classes\\sessiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\classes\\swingdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\classes\\swingdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\contentviews\\dashboardcard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\contentviews\\dashboardcard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -39,28 +87,8 @@
       "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\platforms\\android\\androidmanifest.xml||{4E01A4BC-CFCF-452C-8C08-51352512D197}",
-      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\platforms\\android\\androidmanifest.xml||{4E01A4BC-CFCF-452C-8C08-51352512D197}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\platforms\\android\\mainapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\platforms\\android\\mainapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\extropian.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -83,20 +111,12 @@
       "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\pages\\settings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\pages\\session.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\pages\\session.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\pages\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\pages\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\pages\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\pages\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|c:\\users\\patrick\\desktop\\extropian\\gen1.5\\maui_app\\extropian\\extropian\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{EA3EB04B-94CC-4F6D-8310-F7F48930AD4F}|Extropian\\Extropian.csproj|solutionrelative:extropian\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -106,11 +126,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "Dashboard.xaml",
               "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Dashboard.xaml",
               "RelativeDocumentMoniker": "Extropian\\Pages\\Dashboard.xaml",
@@ -124,33 +144,265 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Social.xaml",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Social.xaml",
+              "RelativeDocumentMoniker": "Extropian\\Pages\\Social.xaml",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Social.xaml",
+              "RelativeToolTip": "Extropian\\Pages\\Social.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-06T18:40:00.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Settings.xaml",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Settings.xaml",
+              "RelativeDocumentMoniker": "Extropian\\Pages\\Settings.xaml",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Settings.xaml",
+              "RelativeToolTip": "Extropian\\Pages\\Settings.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-06T18:39:44.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "SignUp.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\SignUp.xaml.cs",
+              "RelativeDocumentMoniker": "Extropian\\Pages\\SignUp.xaml.cs",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\SignUp.xaml.cs",
+              "RelativeToolTip": "Extropian\\Pages\\SignUp.xaml.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAMwEoAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T17:12:19.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "SignUp.xaml",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\SignUp.xaml",
+              "RelativeDocumentMoniker": "Extropian\\Pages\\SignUp.xaml",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\SignUp.xaml",
+              "RelativeToolTip": "Extropian\\Pages\\SignUp.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-06T16:56:48.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "Extropian\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\MainPage.xaml.cs",
+              "RelativeToolTip": "Extropian\\MainPage.xaml.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T16:48:22.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "MainApplication.cs",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Platforms\\Android\\MainApplication.cs",
+              "RelativeDocumentMoniker": "Extropian\\Platforms\\Android\\MainApplication.cs",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Platforms\\Android\\MainApplication.cs",
+              "RelativeToolTip": "Extropian\\Platforms\\Android\\MainApplication.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T14:28:53.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "Extropian\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\MauiProgram.cs",
+              "RelativeToolTip": "Extropian\\MauiProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T16:46:53.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Devices.cs",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Classes\\Devices.cs",
+              "RelativeDocumentMoniker": "Extropian\\Classes\\Devices.cs",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Classes\\Devices.cs",
+              "RelativeToolTip": "Extropian\\Classes\\Devices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T18:49:15.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BleManagerService.cs",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Classes\\BleManagerService.cs",
+              "RelativeDocumentMoniker": "Extropian\\Classes\\BleManagerService.cs",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Classes\\BleManagerService.cs",
+              "RelativeToolTip": "Extropian\\Classes\\BleManagerService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T18:12:10.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AndroidManifest.xml",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Platforms\\Android\\AndroidManifest.xml",
+              "RelativeDocumentMoniker": "Extropian\\Platforms\\Android\\AndroidManifest.xml",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Platforms\\Android\\AndroidManifest.xml",
+              "RelativeToolTip": "Extropian\\Platforms\\Android\\AndroidManifest.xml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-08-07T14:32:24.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Connect.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Connect.xaml.cs",
+              "RelativeDocumentMoniker": "Extropian\\Pages\\Connect.xaml.cs",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Connect.xaml.cs*",
+              "RelativeToolTip": "Extropian\\Pages\\Connect.xaml.cs*",
+              "ViewState": "AgIAAGUDAAAAAAAAAAD4v4MDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T18:11:09.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Session.xaml",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Session.xaml",
+              "RelativeDocumentMoniker": "Extropian\\Pages\\Session.xaml",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Session.xaml",
+              "RelativeToolTip": "Extropian\\Pages\\Session.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-06T18:39:21.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Connect.xaml",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Connect.xaml",
+              "RelativeDocumentMoniker": "Extropian\\Pages\\Connect.xaml",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Connect.xaml",
+              "RelativeToolTip": "Extropian\\Pages\\Connect.xaml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-07T18:08:41.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "SwingData.cs",
               "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Classes\\SwingData.cs",
               "RelativeDocumentMoniker": "Extropian\\Classes\\SwingData.cs",
               "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Classes\\SwingData.cs",
               "RelativeToolTip": "Extropian\\Classes\\SwingData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-07T16:57:12.025Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SessionData.cs",
-              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Classes\\SessionData.cs",
-              "RelativeDocumentMoniker": "Extropian\\Classes\\SessionData.cs",
-              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Classes\\SessionData.cs",
-              "RelativeToolTip": "Extropian\\Classes\\SessionData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "MainActivity.cs",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Platforms\\Android\\MainActivity.cs",
+              "RelativeDocumentMoniker": "Extropian\\Platforms\\Android\\MainActivity.cs",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Platforms\\Android\\MainActivity.cs",
+              "RelativeToolTip": "Extropian\\Platforms\\Android\\MainActivity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T13:53:50.922Z",
+              "WhenOpened": "2025-08-07T16:16:44.064Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "Session.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Session.xaml.cs",
+              "RelativeDocumentMoniker": "Extropian\\Pages\\Session.xaml.cs",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Session.xaml.cs",
+              "RelativeToolTip": "Extropian\\Pages\\Session.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T18:01:49.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Dashboard.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Dashboard.xaml.cs",
+              "RelativeDocumentMoniker": "Extropian\\Pages\\Dashboard.xaml.cs",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Dashboard.xaml.cs",
+              "RelativeToolTip": "Extropian\\Pages\\Dashboard.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T18:37:57.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\MainPage.xaml",
+              "RelativeDocumentMoniker": "Extropian\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\MainPage.xaml",
+              "RelativeToolTip": "Extropian\\MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-06T16:48:20.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\AppShell.xaml",
+              "RelativeDocumentMoniker": "Extropian\\AppShell.xaml",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\AppShell.xaml",
+              "RelativeToolTip": "Extropian\\AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-06T16:47:31.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Extropian\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\App.xaml.cs",
+              "RelativeToolTip": "Extropian\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T18:42:04.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "FirestoreService.cs",
               "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Classes\\FirestoreService.cs",
               "RelativeDocumentMoniker": "Extropian\\Classes\\FirestoreService.cs",
@@ -164,123 +416,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\App.xaml.cs",
-              "RelativeDocumentMoniker": "Extropian\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\App.xaml.cs",
-              "RelativeToolTip": "Extropian\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Title": "SessionData.cs",
+              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Classes\\SessionData.cs",
+              "RelativeDocumentMoniker": "Extropian\\Classes\\SessionData.cs",
+              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Classes\\SessionData.cs",
+              "RelativeToolTip": "Extropian\\Classes\\SessionData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T18:42:04.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Social.xaml",
-              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Social.xaml",
-              "RelativeDocumentMoniker": "Extropian\\Pages\\Social.xaml",
-              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Social.xaml",
-              "RelativeToolTip": "Extropian\\Pages\\Social.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-06T18:40:00.388Z",
+              "WhenOpened": "2025-08-07T13:53:50.922Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "Settings.xaml",
-              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Settings.xaml",
-              "RelativeDocumentMoniker": "Extropian\\Pages\\Settings.xaml",
-              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Settings.xaml",
-              "RelativeToolTip": "Extropian\\Pages\\Settings.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-06T18:39:44.947Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Session.xaml",
-              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Session.xaml",
-              "RelativeDocumentMoniker": "Extropian\\Pages\\Session.xaml",
-              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Session.xaml",
-              "RelativeToolTip": "Extropian\\Pages\\Session.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-06T18:39:21.434Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Dashboard.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Dashboard.xaml.cs",
-              "RelativeDocumentMoniker": "Extropian\\Pages\\Dashboard.xaml.cs",
-              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\Dashboard.xaml.cs",
-              "RelativeToolTip": "Extropian\\Pages\\Dashboard.xaml.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBkAAACUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T18:37:57.551Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "SignUp.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\SignUp.xaml.cs",
-              "RelativeDocumentMoniker": "Extropian\\Pages\\SignUp.xaml.cs",
-              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\SignUp.xaml.cs",
-              "RelativeToolTip": "Extropian\\Pages\\SignUp.xaml.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAMwEoAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T17:12:19.294Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "SignUp.xaml",
-              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\SignUp.xaml",
-              "RelativeDocumentMoniker": "Extropian\\Pages\\SignUp.xaml",
-              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Pages\\SignUp.xaml",
-              "RelativeToolTip": "Extropian\\Pages\\SignUp.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-06T16:56:48.181Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "Extropian\\MainPage.xaml.cs",
-              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\MainPage.xaml.cs",
-              "RelativeToolTip": "Extropian\\MainPage.xaml.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAgwDMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T16:48:22.592Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MainApplication.cs",
-              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Platforms\\Android\\MainApplication.cs",
-              "RelativeDocumentMoniker": "Extropian\\Platforms\\Android\\MainApplication.cs",
-              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Platforms\\Android\\MainApplication.cs",
-              "RelativeToolTip": "Extropian\\Platforms\\Android\\MainApplication.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T14:28:53.431Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "DashboardCard.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\ContentViews\\DashboardCard.xaml.cs",
               "RelativeDocumentMoniker": "Extropian\\ContentViews\\DashboardCard.xaml.cs",
@@ -293,20 +441,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 15,
               "Title": "DashboardCard.xaml",
               "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\ContentViews\\DashboardCard.xaml",
               "RelativeDocumentMoniker": "Extropian\\ContentViews\\DashboardCard.xaml",
               "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\ContentViews\\DashboardCard.xaml",
               "RelativeToolTip": "Extropian\\ContentViews\\DashboardCard.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-08-07T13:41:39.322Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\App.xaml",
               "RelativeDocumentMoniker": "Extropian\\App.xaml",
@@ -319,33 +467,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "Extropian.csproj",
               "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Extropian.csproj",
               "RelativeDocumentMoniker": "Extropian\\Extropian.csproj",
               "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Extropian.csproj",
               "RelativeToolTip": "Extropian\\Extropian.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAUwGMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAUwG8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-08-07T13:18:50.883Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "Extropian\\MauiProgram.cs",
-              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\MauiProgram.cs",
-              "RelativeToolTip": "Extropian\\MauiProgram.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T16:46:53.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 20,
               "Title": "AppShell.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\AppShell.xaml.cs",
               "RelativeDocumentMoniker": "Extropian\\AppShell.xaml.cs",
@@ -358,57 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MainActivity.cs",
-              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Platforms\\Android\\MainActivity.cs",
-              "RelativeDocumentMoniker": "Extropian\\Platforms\\Android\\MainActivity.cs",
-              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Platforms\\Android\\MainActivity.cs",
-              "RelativeToolTip": "Extropian\\Platforms\\Android\\MainActivity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T16:16:44.064Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AndroidManifest.xml",
-              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Platforms\\Android\\AndroidManifest.xml",
-              "RelativeDocumentMoniker": "Extropian\\Platforms\\Android\\AndroidManifest.xml",
-              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Platforms\\Android\\AndroidManifest.xml",
-              "RelativeToolTip": "Extropian\\Platforms\\Android\\AndroidManifest.xml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-08-07T14:32:24.551Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\MainPage.xaml",
-              "RelativeDocumentMoniker": "Extropian\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\MainPage.xaml",
-              "RelativeToolTip": "Extropian\\MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-06T16:48:20.618Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AppShell.xaml",
-              "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\AppShell.xaml",
-              "RelativeDocumentMoniker": "Extropian\\AppShell.xaml",
-              "ToolTip": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\AppShell.xaml",
-              "RelativeToolTip": "Extropian\\AppShell.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-06T16:47:31.282Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Classes\\User.cs",
               "RelativeDocumentMoniker": "Extropian\\Classes\\User.cs",

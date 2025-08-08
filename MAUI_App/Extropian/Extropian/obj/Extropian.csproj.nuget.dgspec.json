@@ -84,6 +84,26 @@
             "Plugin.CloudFirestore": {
               "target": "Package",
               "version": "[4.1.0, )"
+            },
+            "Shiny": {
+              "target": "Package",
+              "version": "[2.7.3, )"
+            },
+            "Shiny.BluetoothLE": {
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Shiny.BluetoothLE.Common": {
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Shiny.Core": {
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Shiny.Hosting.Maui": {
+              "target": "Package",
+              "version": "[3.3.4, )"
             }
           },
           "imports": [
@@ -127,6 +147,26 @@
             "Plugin.CloudFirestore": {
               "target": "Package",
               "version": "[4.1.0, )"
+            },
+            "Shiny": {
+              "target": "Package",
+              "version": "[2.7.3, )"
+            },
+            "Shiny.BluetoothLE": {
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Shiny.BluetoothLE.Common": {
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Shiny.Core": {
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Shiny.Hosting.Maui": {
+              "target": "Package",
+              "version": "[3.3.4, )"
             }
           },
           "imports": [
@@ -170,6 +210,26 @@
             "Plugin.CloudFirestore": {
               "target": "Package",
               "version": "[4.1.0, )"
+            },
+            "Shiny": {
+              "target": "Package",
+              "version": "[2.7.3, )"
+            },
+            "Shiny.BluetoothLE": {
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Shiny.BluetoothLE.Common": {
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Shiny.Core": {
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Shiny.Hosting.Maui": {
+              "target": "Package",
+              "version": "[3.3.4, )"
             }
           },
           "imports": [
@@ -208,6 +268,26 @@
             "Plugin.CloudFirestore": {
               "target": "Package",
               "version": "[4.1.0, )"
+            },
+            "Shiny": {
+              "target": "Package",
+              "version": "[2.7.3, )"
+            },
+            "Shiny.BluetoothLE": {
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Shiny.BluetoothLE.Common": {
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Shiny.Core": {
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Shiny.Hosting.Maui": {
+              "target": "Package",
+              "version": "[3.3.4, )"
             }
           },
           "imports": [

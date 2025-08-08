@@ -448,6 +448,100 @@
           }
         }
       },
+      "Shiny/2.7.3": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Shiny.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Shiny.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0",
+          "Xamarin.AndroidX.Core": "1.12.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.6.2.1",
+          "Xamarin.AndroidX.Lifecycle.Process": "2.6.2.1"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Square.OkHttp/2.7.5.1": {
         "type": "package",
         "dependencies": {
@@ -469,20 +563,20 @@
           "lib/monoandroid44/Square.OkIO.dll": {}
         }
       },
-      "System.Reactive/5.0.0": {
+      "System.Reactive/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/net6.0/System.Reactive.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/net6.0/System.Reactive.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/net6.0/_._": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.11": {
@@ -3185,6 +3279,100 @@
           }
         }
       },
+      "Shiny/2.7.3": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Shiny.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Shiny.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0",
+          "Xamarin.AndroidX.Core": "1.12.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.6.2.1",
+          "Xamarin.AndroidX.Lifecycle.Process": "2.6.2.1"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Square.OkHttp/2.7.5.1": {
         "type": "package",
         "dependencies": {
@@ -3206,20 +3394,20 @@
           "lib/monoandroid44/Square.OkIO.dll": {}
         }
       },
-      "System.Reactive/5.0.0": {
+      "System.Reactive/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/net6.0/System.Reactive.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/net6.0/System.Reactive.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/net6.0/_._": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.11": {
@@ -5922,6 +6110,100 @@
           }
         }
       },
+      "Shiny/2.7.3": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Shiny.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Shiny.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0",
+          "Xamarin.AndroidX.Core": "1.12.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.6.2.1",
+          "Xamarin.AndroidX.Lifecycle.Process": "2.6.2.1"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Square.OkHttp/2.7.5.1": {
         "type": "package",
         "dependencies": {
@@ -5943,20 +6225,20 @@
           "lib/monoandroid44/Square.OkIO.dll": {}
         }
       },
-      "System.Reactive/5.0.0": {
+      "System.Reactive/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/net6.0/System.Reactive.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/net6.0/System.Reactive.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/net6.0/_._": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.11": {
@@ -8659,6 +8941,100 @@
           }
         }
       },
+      "Shiny/2.7.3": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Shiny.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Shiny.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0",
+          "Xamarin.AndroidX.Core": "1.12.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.6.2.1",
+          "Xamarin.AndroidX.Lifecycle.Process": "2.6.2.1"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Square.OkHttp/2.7.5.1": {
         "type": "package",
         "dependencies": {
@@ -8680,20 +9056,20 @@
           "lib/monoandroid44/Square.OkIO.dll": {}
         }
       },
-      "System.Reactive/5.0.0": {
+      "System.Reactive/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/net6.0/System.Reactive.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/net6.0/System.Reactive.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/net6.0/_._": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.11": {
@@ -11396,6 +11772,100 @@
           }
         }
       },
+      "Shiny/2.7.3": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Shiny.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Shiny.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0",
+          "Xamarin.AndroidX.Core": "1.12.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.6.2.1",
+          "Xamarin.AndroidX.Lifecycle.Process": "2.6.2.1"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Square.OkHttp/2.7.5.1": {
         "type": "package",
         "dependencies": {
@@ -11417,20 +11887,20 @@
           "lib/monoandroid44/Square.OkIO.dll": {}
         }
       },
-      "System.Reactive/5.0.0": {
+      "System.Reactive/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/net6.0/System.Reactive.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/net6.0/System.Reactive.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/net6.0/_._": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.11": {
@@ -14133,6 +14603,100 @@
           }
         }
       },
+      "Shiny/2.7.3": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Shiny.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Shiny.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0",
+          "Xamarin.AndroidX.Core": "1.12.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.6.2.1",
+          "Xamarin.AndroidX.Lifecycle.Process": "2.6.2.1"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Square.OkHttp/2.7.5.1": {
         "type": "package",
         "dependencies": {
@@ -14154,20 +14718,20 @@
           "lib/monoandroid44/Square.OkIO.dll": {}
         }
       },
-      "System.Reactive/5.0.0": {
+      "System.Reactive/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/net6.0/System.Reactive.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/net6.0/System.Reactive.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/net6.0/_._": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.11": {
@@ -16840,20 +17404,111 @@
           }
         }
       },
-      "System.Reactive/5.0.0": {
+      "Shiny/2.7.3": {
         "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
         "compile": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       }
     },
@@ -17274,20 +17929,111 @@
           }
         }
       },
-      "System.Reactive/5.0.0": {
+      "Shiny/2.7.3": {
         "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
         "compile": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       }
     },
@@ -17708,20 +18454,111 @@
           }
         }
       },
-      "System.Reactive/5.0.0": {
+      "Shiny/2.7.3": {
         "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
         "compile": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       }
     },
@@ -18142,20 +18979,111 @@
           }
         }
       },
-      "System.Reactive/5.0.0": {
+      "Shiny/2.7.3": {
         "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
         "compile": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       }
     },
@@ -18576,20 +19504,111 @@
           }
         }
       },
-      "System.Reactive/5.0.0": {
+      "Shiny/2.7.3": {
         "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
         "compile": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       }
     },
@@ -19010,20 +20029,111 @@
           }
         }
       },
-      "System.Reactive/5.0.0": {
+      "Shiny/2.7.3": {
         "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
         "compile": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       }
     },
@@ -19444,20 +20554,111 @@
           }
         }
       },
-      "System.Reactive/5.0.0": {
+      "Shiny/2.7.3": {
         "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
         "compile": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       }
     },
@@ -19878,20 +21079,111 @@
           }
         }
       },
-      "System.Reactive/5.0.0": {
+      "Shiny/2.7.3": {
         "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
         "compile": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       }
     },
@@ -20312,20 +21604,111 @@
           }
         }
       },
-      "System.Reactive/5.0.0": {
+      "Shiny/2.7.3": {
         "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
         "compile": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       }
     },
@@ -20746,20 +22129,111 @@
           }
         }
       },
-      "System.Reactive/5.0.0": {
+      "Shiny/2.7.3": {
         "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
         "compile": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       }
     },
@@ -21180,20 +22654,111 @@
           }
         }
       },
-      "System.Reactive/5.0.0": {
+      "Shiny/2.7.3": {
         "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
         "compile": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       }
     },
@@ -21614,20 +23179,111 @@
           }
         }
       },
-      "System.Reactive/5.0.0": {
+      "Shiny/2.7.3": {
         "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
         "compile": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       }
     },
@@ -22258,15 +23914,106 @@
           }
         }
       },
-      "System.Reactive/5.0.0": {
+      "Shiny/2.7.3": {
         "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
         "compile": {
-          "lib/net5.0-windows10.0.19041/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0-windows10.0.19041/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows10.0.19041/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/System.Reactive.dll": {
             "related": ".xml"
           }
         },
@@ -22274,7 +24021,7 @@
           "Microsoft.WindowsDesktop.App"
         ],
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/net6.0-windows10.0.19041/_._": {}
         }
       }
     },
@@ -22863,15 +24610,106 @@
           }
         }
       },
-      "System.Reactive/5.0.0": {
+      "Shiny/2.7.3": {
         "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
         "compile": {
-          "lib/net5.0-windows10.0.19041/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0-windows10.0.19041/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows10.0.19041/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/System.Reactive.dll": {
             "related": ".xml"
           }
         },
@@ -22879,7 +24717,7 @@
           "Microsoft.WindowsDesktop.App"
         ],
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/net6.0-windows10.0.19041/_._": {}
         }
       }
     },
@@ -23468,15 +25306,106 @@
           }
         }
       },
-      "System.Reactive/5.0.0": {
+      "Shiny/2.7.3": {
         "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
         "compile": {
-          "lib/net5.0-windows10.0.19041/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0-windows10.0.19041/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows10.0.19041/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/System.Reactive.dll": {
             "related": ".xml"
           }
         },
@@ -23484,7 +25413,7 @@
           "Microsoft.WindowsDesktop.App"
         ],
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/net6.0-windows10.0.19041/_._": {}
         }
       }
     },
@@ -24073,15 +26002,106 @@
           }
         }
       },
-      "System.Reactive/5.0.0": {
+      "Shiny/2.7.3": {
         "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
         "compile": {
-          "lib/net5.0-windows10.0.19041/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0-windows10.0.19041/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows10.0.19041/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/System.Reactive.dll": {
             "related": ".xml"
           }
         },
@@ -24089,7 +26109,7 @@
           "Microsoft.WindowsDesktop.App"
         ],
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/net6.0-windows10.0.19041/_._": {}
         }
       }
     },
@@ -24678,15 +26698,106 @@
           }
         }
       },
-      "System.Reactive/5.0.0": {
+      "Shiny/2.7.3": {
         "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
         "compile": {
-          "lib/net5.0-windows10.0.19041/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0-windows10.0.19041/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows10.0.19041/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/System.Reactive.dll": {
             "related": ".xml"
           }
         },
@@ -24694,7 +26805,7 @@
           "Microsoft.WindowsDesktop.App"
         ],
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/net6.0-windows10.0.19041/_._": {}
         }
       }
     },
@@ -25292,15 +27403,106 @@
           }
         }
       },
-      "System.Reactive/5.0.0": {
+      "Shiny/2.7.3": {
         "type": "package",
+        "dependencies": {
+          "Shiny.Core": "2.7.3"
+        },
         "compile": {
-          "lib/net5.0-windows10.0.19041/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0-windows10.0.19041/System.Reactive.dll": {
+          "lib/netstandard2.0/Shiny.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/shiny.props": {},
+          "buildTransitive/netstandard2.0/shiny.targets": {}
+        }
+      },
+      "Shiny.BluetoothLE/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.BluetoothLE.Common": "3.3.4",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Shiny.BluetoothLE.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.BluetoothLE.Common/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Shiny.BluetoothLE.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Shiny.Core/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Shiny.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shiny.Core.targets": {}
+        }
+      },
+      "Shiny.Hosting.Maui/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.6",
+          "Shiny.Core": "3.3.4"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Shiny.Hosting.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows10.0.19041/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/System.Reactive.dll": {
             "related": ".xml"
           }
         },
@@ -25308,7 +27510,7 @@
           "Microsoft.WindowsDesktop.App"
         ],
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/net6.0-windows10.0.19041/_._": {}
         }
       }
     }
@@ -27262,6 +29464,137 @@
         "plugin.cloudfirestore.nuspec"
       ]
     },
+    "Shiny/2.7.3": {
+      "sha512": "PXnMoqB79ekOHKUalSH7HS1s2VSs3hGZUxRT8vWi8DxP0moTj3Q7njG883QuygfxzsRC1ZJvU/+5SeJ7H03w4A==",
+      "type": "package",
+      "path": "shiny/2.7.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/Shiny.Generators.dll",
+        "build/netstandard2.0/shiny.targets",
+        "buildTransitive/netstandard2.0/shiny.props",
+        "buildTransitive/netstandard2.0/shiny.targets",
+        "icon.png",
+        "lib/netstandard2.0/Shiny.dll",
+        "lib/netstandard2.0/Shiny.xml",
+        "readme.md",
+        "readme.txt",
+        "shiny.2.7.3.nupkg.sha512",
+        "shiny.nuspec"
+      ]
+    },
+    "Shiny.BluetoothLE/3.3.4": {
+      "sha512": "UiNunOiKFtE+/s5K4hD115FYkciHwcQHGNX2I1uV9JdpBfGP9keI3MPRW8imLrRglBQWoIbdQnNGwE39hT8U9A==",
+      "type": "package",
+      "path": "shiny.bluetoothle/3.3.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/monoandroid13.0/Shiny.BluetoothLE.dll",
+        "lib/monoandroid13.0/Shiny.BluetoothLE.xml",
+        "lib/net8.0-android34.0/Shiny.BluetoothLE.dll",
+        "lib/net8.0-android34.0/Shiny.BluetoothLE.xml",
+        "lib/net8.0-ios18.0/Shiny.BluetoothLE.dll",
+        "lib/net8.0-ios18.0/Shiny.BluetoothLE.xml",
+        "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.dll",
+        "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.xml",
+        "lib/net8.0-windows10.0.19041/Shiny.BluetoothLE.dll",
+        "lib/net8.0-windows10.0.19041/Shiny.BluetoothLE.xml",
+        "lib/net8.0/Shiny.BluetoothLE.dll",
+        "lib/net8.0/Shiny.BluetoothLE.xml",
+        "lib/netstandard2.1/Shiny.BluetoothLE.dll",
+        "lib/netstandard2.1/Shiny.BluetoothLE.xml",
+        "lib/xamarinios10/Shiny.BluetoothLE.dll",
+        "lib/xamarinios10/Shiny.BluetoothLE.xml",
+        "readme.md",
+        "readme.txt",
+        "shiny.bluetoothle.3.3.4.nupkg.sha512",
+        "shiny.bluetoothle.nuspec"
+      ]
+    },
+    "Shiny.BluetoothLE.Common/3.3.4": {
+      "sha512": "eZXab3nwwo9R7uwrKfPARRaPeFJE34Fc4zm7lYlKGj/kV/EF/z5T3vjJ1vKXS11y/zr0CIrT88Djw5sZSM/WyA==",
+      "type": "package",
+      "path": "shiny.bluetoothle.common/3.3.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/monoandroid13.0/Shiny.BluetoothLE.Common.dll",
+        "lib/monoandroid13.0/Shiny.BluetoothLE.Common.xml",
+        "lib/net8.0-android34.0/Shiny.BluetoothLE.Common.dll",
+        "lib/net8.0-android34.0/Shiny.BluetoothLE.Common.xml",
+        "lib/net8.0-ios18.0/Shiny.BluetoothLE.Common.dll",
+        "lib/net8.0-ios18.0/Shiny.BluetoothLE.Common.xml",
+        "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.Common.dll",
+        "lib/net8.0-maccatalyst18.0/Shiny.BluetoothLE.Common.xml",
+        "lib/net8.0/Shiny.BluetoothLE.Common.dll",
+        "lib/net8.0/Shiny.BluetoothLE.Common.xml",
+        "lib/netstandard2.1/Shiny.BluetoothLE.Common.dll",
+        "lib/netstandard2.1/Shiny.BluetoothLE.Common.xml",
+        "lib/xamarinios10/Shiny.BluetoothLE.Common.dll",
+        "lib/xamarinios10/Shiny.BluetoothLE.Common.xml",
+        "readme.md",
+        "readme.txt",
+        "shiny.bluetoothle.common.3.3.4.nupkg.sha512",
+        "shiny.bluetoothle.common.nuspec"
+      ]
+    },
+    "Shiny.Core/3.3.4": {
+      "sha512": "g0ggMFeKUinzohAxb/w1ISsg4D+DYaqGy4b7Pi4RCNuXHHhGAGQnsC370Haf0eOVhZjIP2LDTPMUJb5VmbAnvQ==",
+      "type": "package",
+      "path": "shiny.core/3.3.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "buildTransitive/Shiny.Core.targets",
+        "icon.png",
+        "lib/monoandroid13.0/Shiny.Core.dll",
+        "lib/monoandroid13.0/Shiny.Core.xml",
+        "lib/net8.0-android34.0/Shiny.Core.dll",
+        "lib/net8.0-android34.0/Shiny.Core.xml",
+        "lib/net8.0-ios18.0/Shiny.Core.dll",
+        "lib/net8.0-ios18.0/Shiny.Core.xml",
+        "lib/net8.0-maccatalyst18.0/Shiny.Core.dll",
+        "lib/net8.0-maccatalyst18.0/Shiny.Core.xml",
+        "lib/net8.0-windows10.0.19041/Shiny.Core.dll",
+        "lib/net8.0-windows10.0.19041/Shiny.Core.xml",
+        "lib/net8.0/Shiny.Core.dll",
+        "lib/net8.0/Shiny.Core.xml",
+        "lib/netstandard2.1/Shiny.Core.dll",
+        "lib/netstandard2.1/Shiny.Core.xml",
+        "lib/xamarinios10/Shiny.Core.dll",
+        "lib/xamarinios10/Shiny.Core.xml",
+        "readme.md",
+        "readme.txt",
+        "shiny.core.3.3.4.nupkg.sha512",
+        "shiny.core.nuspec"
+      ]
+    },
+    "Shiny.Hosting.Maui/3.3.4": {
+      "sha512": "FO3TxfV4euqAA4NLYZIonKKZlpkNrMGjsjOYsTmrBGlHpZqTsGJtkDhbxGSdxfnZLHEqA9pMHYnnsA9wY7c0eA==",
+      "type": "package",
+      "path": "shiny.hosting.maui/3.3.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net8.0-android34.0/Shiny.Hosting.Maui.dll",
+        "lib/net8.0-android34.0/Shiny.Hosting.Maui.xml",
+        "lib/net8.0-ios18.0/Shiny.Hosting.Maui.dll",
+        "lib/net8.0-ios18.0/Shiny.Hosting.Maui.xml",
+        "lib/net8.0-maccatalyst18.0/Shiny.Hosting.Maui.dll",
+        "lib/net8.0-maccatalyst18.0/Shiny.Hosting.Maui.xml",
+        "lib/net8.0-windows10.0.19041/Shiny.Hosting.Maui.dll",
+        "lib/net8.0-windows10.0.19041/Shiny.Hosting.Maui.xml",
+        "readme.md",
+        "readme.txt",
+        "shiny.hosting.maui.3.3.4.nupkg.sha512",
+        "shiny.hosting.maui.nuspec"
+      ]
+    },
     "Square.OkHttp/2.7.5.1": {
       "sha512": "zEQYDkCFOV523LrQx76NxqCQkaJO34bRLoqMGDCAQC/BpiQWeilE/UmsUUqibGAawUzPZCJIsHa3xdFe+cJQaA==",
       "type": "package",
@@ -27286,32 +29619,31 @@
         "square.okio.nuspec"
       ]
     },
-    "System.Reactive/5.0.0": {
-      "sha512": "erBZjkQHWL9jpasCE/0qKAryzVBJFxGHVBAvgRN1bzM0q2s1S4oYREEEL0Vb+1kA/6BKb5FjUZMp5VXmy+gzkQ==",
+    "System.Reactive/6.0.0": {
+      "sha512": "31kfaW4ZupZzPsI5PVe77VhnvFF55qgma7KZr/E0iFTs6fmdhhG8j0mgEx620iLTey1EynOkEfnyTjtNEpJzGw==",
       "type": "package",
-      "path": "system.reactive/5.0.0",
+      "path": "system.reactive/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "build/net5.0/_._",
-        "build/netcoreapp3.1/System.Reactive.dll",
-        "build/netcoreapp3.1/System.Reactive.targets",
-        "build/netcoreapp3.1/System.Reactive.xml",
-        "buildTransitive/net5.0/_._",
-        "buildTransitive/netcoreapp3.1/System.Reactive.targets",
+        "build/net6.0-windows10.0.19041/_._",
+        "build/net6.0/_._",
+        "buildTransitive/net6.0-windows10.0.19041/_._",
+        "buildTransitive/net6.0/_._",
+        "icon.png",
         "lib/net472/System.Reactive.dll",
         "lib/net472/System.Reactive.xml",
-        "lib/net5.0-windows10.0.19041/System.Reactive.dll",
-        "lib/net5.0-windows10.0.19041/System.Reactive.xml",
-        "lib/net5.0/System.Reactive.dll",
-        "lib/net5.0/System.Reactive.xml",
-        "lib/netcoreapp3.1/_._",
+        "lib/net6.0-windows10.0.19041/System.Reactive.dll",
+        "lib/net6.0-windows10.0.19041/System.Reactive.xml",
+        "lib/net6.0/System.Reactive.dll",
+        "lib/net6.0/System.Reactive.xml",
         "lib/netstandard2.0/System.Reactive.dll",
         "lib/netstandard2.0/System.Reactive.xml",
-        "lib/uap10.0.16299/System.Reactive.dll",
-        "lib/uap10.0.16299/System.Reactive.pri",
-        "lib/uap10.0.16299/System.Reactive.xml",
-        "system.reactive.5.0.0.nupkg.sha512",
+        "lib/uap10.0.18362/System.Reactive.dll",
+        "lib/uap10.0.18362/System.Reactive.pri",
+        "lib/uap10.0.18362/System.Reactive.xml",
+        "readme.md",
+        "system.reactive.6.0.0.nupkg.sha512",
         "system.reactive.nuspec"
       ]
     },
@@ -29686,24 +32018,44 @@
       "Microsoft.Extensions.Logging.Debug >= 9.0.0",
       "Microsoft.Maui.Controls >= 9.0.51",
       "Microsoft.NET.ILLink.Tasks >= 9.0.7",
-      "Plugin.CloudFirestore >= 4.1.0"
+      "Plugin.CloudFirestore >= 4.1.0",
+      "Shiny >= 2.7.3",
+      "Shiny.BluetoothLE >= 3.3.4",
+      "Shiny.BluetoothLE.Common >= 3.3.4",
+      "Shiny.Core >= 3.3.4",
+      "Shiny.Hosting.Maui >= 3.3.4"
     ],
     "net9.0-ios18.5": [
       "Microsoft.Extensions.Logging.Debug >= 9.0.0",
       "Microsoft.Maui.Controls >= 9.0.51",
       "Microsoft.NET.ILLink.Tasks >= 9.0.7",
-      "Plugin.CloudFirestore >= 4.1.0"
+      "Plugin.CloudFirestore >= 4.1.0",
+      "Shiny >= 2.7.3",
+      "Shiny.BluetoothLE >= 3.3.4",
+      "Shiny.BluetoothLE.Common >= 3.3.4",
+      "Shiny.Core >= 3.3.4",
+      "Shiny.Hosting.Maui >= 3.3.4"
     ],
     "net9.0-maccatalyst18.5": [
       "Microsoft.Extensions.Logging.Debug >= 9.0.0",
       "Microsoft.Maui.Controls >= 9.0.51",
       "Microsoft.NET.ILLink.Tasks >= 9.0.7",
-      "Plugin.CloudFirestore >= 4.1.0"
+      "Plugin.CloudFirestore >= 4.1.0",
+      "Shiny >= 2.7.3",
+      "Shiny.BluetoothLE >= 3.3.4",
+      "Shiny.BluetoothLE.Common >= 3.3.4",
+      "Shiny.Core >= 3.3.4",
+      "Shiny.Hosting.Maui >= 3.3.4"
     ],
     "net9.0-windows10.0.19041": [
       "Microsoft.Extensions.Logging.Debug >= 9.0.0",
       "Microsoft.Maui.Controls >= 9.0.51",
-      "Plugin.CloudFirestore >= 4.1.0"
+      "Plugin.CloudFirestore >= 4.1.0",
+      "Shiny >= 2.7.3",
+      "Shiny.BluetoothLE >= 3.3.4",
+      "Shiny.BluetoothLE.Common >= 3.3.4",
+      "Shiny.Core >= 3.3.4",
+      "Shiny.Hosting.Maui >= 3.3.4"
     ]
   },
   "packageFolders": {
@@ -29790,6 +32142,26 @@
           "Plugin.CloudFirestore": {
             "target": "Package",
             "version": "[4.1.0, )"
+          },
+          "Shiny": {
+            "target": "Package",
+            "version": "[2.7.3, )"
+          },
+          "Shiny.BluetoothLE": {
+            "target": "Package",
+            "version": "[3.3.4, )"
+          },
+          "Shiny.BluetoothLE.Common": {
+            "target": "Package",
+            "version": "[3.3.4, )"
+          },
+          "Shiny.Core": {
+            "target": "Package",
+            "version": "[3.3.4, )"
+          },
+          "Shiny.Hosting.Maui": {
+            "target": "Package",
+            "version": "[3.3.4, )"
           }
         },
         "imports": [
@@ -29833,6 +32205,26 @@
           "Plugin.CloudFirestore": {
             "target": "Package",
             "version": "[4.1.0, )"
+          },
+          "Shiny": {
+            "target": "Package",
+            "version": "[2.7.3, )"
+          },
+          "Shiny.BluetoothLE": {
+            "target": "Package",
+            "version": "[3.3.4, )"
+          },
+          "Shiny.BluetoothLE.Common": {
+            "target": "Package",
+            "version": "[3.3.4, )"
+          },
+          "Shiny.Core": {
+            "target": "Package",
+            "version": "[3.3.4, )"
+          },
+          "Shiny.Hosting.Maui": {
+            "target": "Package",
+            "version": "[3.3.4, )"
           }
         },
         "imports": [
@@ -29876,6 +32268,26 @@
           "Plugin.CloudFirestore": {
             "target": "Package",
             "version": "[4.1.0, )"
+          },
+          "Shiny": {
+            "target": "Package",
+            "version": "[2.7.3, )"
+          },
+          "Shiny.BluetoothLE": {
+            "target": "Package",
+            "version": "[3.3.4, )"
+          },
+          "Shiny.BluetoothLE.Common": {
+            "target": "Package",
+            "version": "[3.3.4, )"
+          },
+          "Shiny.Core": {
+            "target": "Package",
+            "version": "[3.3.4, )"
+          },
+          "Shiny.Hosting.Maui": {
+            "target": "Package",
+            "version": "[3.3.4, )"
           }
         },
         "imports": [
@@ -29914,6 +32326,26 @@
           "Plugin.CloudFirestore": {
             "target": "Package",
             "version": "[4.1.0, )"
+          },
+          "Shiny": {
+            "target": "Package",
+            "version": "[2.7.3, )"
+          },
+          "Shiny.BluetoothLE": {
+            "target": "Package",
+            "version": "[3.3.4, )"
+          },
+          "Shiny.BluetoothLE.Common": {
+            "target": "Package",
+            "version": "[3.3.4, )"
+          },
+          "Shiny.Core": {
+            "target": "Package",
+            "version": "[3.3.4, )"
+          },
+          "Shiny.Hosting.Maui": {
+            "target": "Package",
+            "version": "[3.3.4, )"
           }
         },
         "imports": [

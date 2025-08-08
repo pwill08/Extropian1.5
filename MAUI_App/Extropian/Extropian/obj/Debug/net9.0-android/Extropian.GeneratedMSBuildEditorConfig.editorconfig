@@ -1,4 +1,8 @@
 is_global = true
+build_property.OutputType = Library
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.RootNamespace = Extropian
+build_property.RootNamespace = Extropian
 build_property.EnableAotAnalyzer = 
 build_property.EnableSingleFileAnalyzer = true
 build_property.EnableTrimAnalyzer = false
@@ -11,7 +15,6 @@ build_property.InvariantGlobalization = false
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = Extropian
 build_property.ProjectDir = C:\Users\Patrick\Desktop\Extropian\Gen1.5\MAUI_App\Extropian\Extropian\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
@@ -41,6 +44,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Extropian.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/Patrick/Desktop/Extropian/Gen1.5/MAUI_App/Extropian/Extropian/Pages/Connect.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Extropian.Pages.Connect.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Connect.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Connect.xaml
 
 [C:/Users/Patrick/Desktop/Extropian/Gen1.5/MAUI_App/Extropian/Extropian/Pages/Dashboard.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

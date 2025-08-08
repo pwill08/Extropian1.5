@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iONVrfx9DVU=",
+  "dgSpecHash": "cByOXieSFOg=",
   "success": true,
   "projectFilePath": "C:\\Users\\Patrick\\Desktop\\Extropian\\Gen1.5\\MAUI_App\\Extropian\\Extropian\\Extropian.csproj",
   "expectedPackageFiles": [
@@ -30,9 +30,14 @@
     "C:\\Users\\Patrick\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\Patrick\\.nuget\\packages\\microsoft.windowsappsdk\\1.6.250205002\\microsoft.windowsappsdk.1.6.250205002.nupkg.sha512",
     "C:\\Users\\Patrick\\.nuget\\packages\\plugin.cloudfirestore\\4.1.0\\plugin.cloudfirestore.4.1.0.nupkg.sha512",
+    "C:\\Users\\Patrick\\.nuget\\packages\\shiny\\2.7.3\\shiny.2.7.3.nupkg.sha512",
+    "C:\\Users\\Patrick\\.nuget\\packages\\shiny.bluetoothle\\3.3.4\\shiny.bluetoothle.3.3.4.nupkg.sha512",
+    "C:\\Users\\Patrick\\.nuget\\packages\\shiny.bluetoothle.common\\3.3.4\\shiny.bluetoothle.common.3.3.4.nupkg.sha512",
+    "C:\\Users\\Patrick\\.nuget\\packages\\shiny.core\\3.3.4\\shiny.core.3.3.4.nupkg.sha512",
+    "C:\\Users\\Patrick\\.nuget\\packages\\shiny.hosting.maui\\3.3.4\\shiny.hosting.maui.3.3.4.nupkg.sha512",
     "C:\\Users\\Patrick\\.nuget\\packages\\square.okhttp\\2.7.5.1\\square.okhttp.2.7.5.1.nupkg.sha512",
     "C:\\Users\\Patrick\\.nuget\\packages\\square.okio\\1.13.0.1\\square.okio.1.13.0.1.nupkg.sha512",
-    "C:\\Users\\Patrick\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512",
+    "C:\\Users\\Patrick\\.nuget\\packages\\system.reactive\\6.0.0\\system.reactive.6.0.0.nupkg.sha512",
     "C:\\Users\\Patrick\\.nuget\\packages\\xamarin.android.glide\\4.16.0.11\\xamarin.android.glide.4.16.0.11.nupkg.sha512",
     "C:\\Users\\Patrick\\.nuget\\packages\\xamarin.android.glide.annotations\\4.16.0.11\\xamarin.android.glide.annotations.4.16.0.11.nupkg.sha512",
     "C:\\Users\\Patrick\\.nuget\\packages\\xamarin.android.glide.disklrucache\\4.16.0.11\\xamarin.android.glide.disklrucache.4.16.0.11.nupkg.sha512",

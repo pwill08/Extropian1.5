@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Extropian.Pages.Connect"
+             Title="Connect">
+    <VerticalStackLayout>
+
+        <Button Text="Scan" 
+                Clicked="ScanForAllDevicesAsync"/>
+        <Label x:Name="ScanStatusLabel" Text="" />
+
+        <HorizontalStackLayout>
+            <VerticalStackLayout
+                x:Name="DevicesButtonStack" 
+                HorizontalOptions="StartAndExpand"
+                Margin="0,0,100,0"
+                >
+                <Button Text="Placeholder 1"/>
+                <Button Text="Placeholder 2"/>
+                <Button Text="Placeholder 3"/>
+                <Button Text="Placeholder 4"/>
+
+            </VerticalStackLayout>
+
+
+
+            <VerticalStackLayout
+                x:Name="PositionsButtonStack" HorizontalOptions="EndAndExpand">
+                <Button Text="Right Wrist"/>
+                <Button Text="Left Wrist"/>
+                <Button Text="Torso Wrist"/>
+                <Button Text="Hip Wrist"/>
+              
+            </VerticalStackLayout>
+
+        </HorizontalStackLayout>
+
+
+        <VerticalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="R Wrist: " />
+                <Label x:Name="RWristMAC" Text="MAC " />
+                <Label x:Name="RWristConnection" Text="Connection" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label Text="L Wrist: " />
+                <Label x:Name="LWristMAC" Text="MAC " />
+                <Label x:Name="LWristConnection" Text="Connection" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label Text="Hip: " />
+                <Label x:Name="HipMAC" Text="MAC " />
+                <Label x:Name="HipConnection" Text="Connection" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label Text="Torso: " />
+                <Label x:Name="TorsoMAC" Text="MAC " />
+                <Label x:Name="TorsoConnection" Text="Connection" />
+            </HorizontalStackLayout>
+
+
+        </VerticalStackLayout>
+
+        <Button Text="Start" Clicked="OnStartImuClicked"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -9,6 +9,14 @@
   <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="35" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.BLUETOOTH" />
+  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+  <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+  <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+  <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+  <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
   <permission android:name="com.extropian.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature" />
   <uses-permission android:name="com.extropian.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
   <application android:name="crc64a6f40cf22d532b3d.MainApplication" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@mipmap/appicon" android:label="Extropian" android:supportsRtl="true">
@@ -27,6 +35,9 @@
     <activity android:name="crc64ba438d8f48cf7e75.IntermediateActivity" android:configChanges="orientation|screenSize" android:exported="false" />
     <receiver android:name="crc640a8d9a12ddbf2cf2.BatteryBroadcastReceiver" android:enabled="true" android:exported="false" android:label="Essentials Battery Broadcast Receiver" />
     <receiver android:name="crc640a8d9a12ddbf2cf2.EnergySaverBroadcastReceiver" android:enabled="true" android:exported="false" android:label="Essentials Energy Saver Broadcast Receiver" />
+    <receiver android:name="org.shiny.bluetoothle.ShinyBleCentralBroadcastReceiver" android:enabled="true" android:exported="true" />
+    <receiver android:name="org.shiny.bluetoothle.ShinyBleAdapterStateBroadcastReceiver" android:enabled="true" android:exported="true" />
+    <receiver android:name="crc643387a08acbe69b14.ActionBroadcastReceiver" android:enabled="true" android:exported="false" android:label="Shiny Broadcast Receiver" />
     <service android:name="crc64396a3fe5f8138e3f.KeepAliveService" />
     <provider android:name="mono.MonoRuntimeProvider" android:authorities="com.extropian.app.mono.MonoRuntimeProvider.__mono_init__" android:exported="false" android:initOrder="1999999999" />
     <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:authorities="com.extropian.app.firebaseinitprovider" android:exported="false" android:initOrder="100" />

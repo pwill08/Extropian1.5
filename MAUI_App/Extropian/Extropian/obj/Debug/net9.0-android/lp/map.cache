@@ -6,6 +6,10 @@ Microsoft.Maui.dll
 Microsoft.Maui.Essentials.dll
 Microsoft.Maui.Graphics.dll
 Plugin.CloudFirestore.dll
+Shiny.BluetoothLE.Common.dll
+Shiny.BluetoothLE.dll
+Shiny.Core.dll
+Shiny.Hosting.Maui.dll
 Square.OkHttp.dll
 Square.OkIO.dll
 Xamarin.Android.Glide.Annotations.dll

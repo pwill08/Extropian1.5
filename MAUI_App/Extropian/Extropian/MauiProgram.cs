@@ -1,4 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
+using Shiny;
+using Shiny.Hosting; // Add this
+using Shiny.BluetoothLE;
+
 
 namespace Extropian
 {
@@ -9,6 +13,7 @@ namespace Extropian
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseShiny()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -16,9 +21,9 @@ namespace Extropian
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
-
+            builder.Services.AddBluetoothLE();
             return builder.Build();
         }
     }

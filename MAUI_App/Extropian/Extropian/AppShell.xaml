@@ -15,6 +15,7 @@
     <!-- TabBar that appears after login -->
     <TabBar Route="dashboard">
         <ShellContent Title="Dashboard" Icon="dashboard.png" ContentTemplate="{DataTemplate pages:Dashboard}" />
+        <ShellContent Title="Connect"   Icon="session.png"   ContentTemplate="{DataTemplate pages:Connect}" />
         <ShellContent Title="Session"   Icon="session.png"   ContentTemplate="{DataTemplate pages:Session}" />
         <ShellContent Title="Social"    Icon="social.png"    ContentTemplate="{DataTemplate pages:Social}" />
         <ShellContent Title="Settings"  Icon="settings.png"  ContentTemplate="{DataTemplate pages:Settings}" />

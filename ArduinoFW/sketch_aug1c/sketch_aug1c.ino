@@ -71,8 +71,19 @@ void setup() {
   }
 
   // Configure BLE device name and service
-  BLE.setLocalName(DEVICE_NAME);      // Local advertising name
-  BLE.setDeviceName(DEVICE_NAME);     // Actual device name
+
+  // ✅ Get MAC suffix
+  String mac = BLE.address();                  // e.g., F4:C8:ED:12:34:56
+  String suffix = mac.substring(mac.length() - 5);  // e.g., 34:56
+  suffix.replace(":", "");                    // Remove ":"
+
+  // ✅ Set dynamic name
+  String deviceName = "Extropian-" + suffix;
+  BLE.setLocalName(deviceName.c_str());      // Local advertising name
+  BLE.setDeviceName(deviceName.c_str());     // Actual device name
+
+  // BLE.setLocalName(DEVICE_NAME);      // Local advertising name
+  // BLE.setDeviceName(DEVICE_NAME);     // Actual device name
   BLE.setAdvertisedService(imuService); // Advertise the IMU service
 
   // Add characteristics to service

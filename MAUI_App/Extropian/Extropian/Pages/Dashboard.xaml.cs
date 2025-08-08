@@ -14,7 +14,7 @@ public partial class Dashboard : ContentPage
 
     private async void LoadSessionCards()
     {
-        var sessions = await FirestoreService.GetAllSessionsForUser("def456", this); // Pass 'this' for alerts
+        var sessions = await FirestoreService.GetAllSessionsForUser(User.userId, this); // Pass 'this' for alerts
 
         await DisplayAlert("Session Count", sessions.Count.ToString(), "OK");
 
@@ -23,7 +23,7 @@ public partial class Dashboard : ContentPage
             var sb = new StringBuilder();
             foreach (var swing in session.Swings)
             {
-                sb.AppendLine($"{swing.TimestampString}  Speed: {swing.WristSpeed}  Rotation: {swing.HipRotation}  WristTS:{swing.WristInitTS}  HipTS:{swing.HipInitTS}  TorsoTS:{swing.TorsoInitTS}");
+                sb.AppendLine($"{swing.TimestampString}  Speed: {swing.WristSpeed}  Rotation: {swing.HipRotation}  WristTS: {swing.WristInitTS}  HipTS: {swing.HipInitTS}  TorsoTS: {swing.TorsoInitTS}");
             }
 
             var card = new DashboardCard
