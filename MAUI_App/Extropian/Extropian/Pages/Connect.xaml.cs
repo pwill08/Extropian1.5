@@ -2,11 +2,15 @@ using Extropian.Classes;
 using Plugin.CloudFirestore;
 using Shiny;
 using Shiny.BluetoothLE;
+using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Linq;
 using System.Reactive.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Extropian.Pages;
 
@@ -43,13 +47,7 @@ public partial class Connect : ContentPage
     private IPeripheral _selectedDevice = null;
     private string _selectedPosition = null;
     private IDocumentReference _activeSessionDoc;
-
-    // Fixed: Use device UUIDs as keys to match device mapping
     private readonly ConcurrentDictionary<string, string> _deviceToLogKeyMap = new();
-    private string _device1Id;
-    private string _device2Id;
-    private string _device3Id;
-    private string _device4Id;
 
     public Connect()
     {
@@ -63,14 +61,7 @@ public partial class Connect : ContentPage
                 positionButton.Clicked += OnPositionSelected;
         }
 
-        // Initialize data structures for up to 4 devices
-        for (int i = 1; i <= 4; i++)
-        {
-            _receivedPackets[$"Device{i}"] = new ConcurrentBag<byte[]>();
-            _deviceSamples[$"Device{i}"] = new List<SensorSample>();
-        }
-
-        // Initialize Firestore and disable offline persistence
+        // Initialize Firestore
         try
         {
             var firestore = CrossCloudFirestore.Current.Instance;
@@ -80,6 +71,11 @@ public partial class Connect : ContentPage
         {
             Debug.WriteLine($"Error initializing Firestore: {ex.Message}");
         }
+    }
+
+    private void UpdateUI(Action action)
+    {
+        MainThread.BeginInvokeOnMainThread(action);
     }
 
     private async Task<bool> CheckPermissionsAsync()
@@ -105,7 +101,7 @@ public partial class Connect : ContentPage
 
     private void OnDeviceStatusChanged(object sender, BleDeviceStatusChangedEventArgs e)
     {
-        MainThread.BeginInvokeOnMainThread(() =>
+        UpdateUI(() =>
         {
             if (e.Device == Devices.DeviceRightWristPeripheral)
             {
@@ -136,17 +132,20 @@ public partial class Connect : ContentPage
     protected override void OnAppearing()
     {
         base.OnAppearing();
-        DevicesButtonStack.Clear();
+        UpdateUI(() => DevicesButtonStack.Clear());
 
         BleManagerService.Instance.MonitorDevice(Devices.DeviceRightWristPeripheral);
         BleManagerService.Instance.MonitorDevice(Devices.DeviceLeftWristPeripheral);
         BleManagerService.Instance.MonitorDevice(Devices.DeviceHipPeripheral);
         BleManagerService.Instance.MonitorDevice(Devices.DeviceTorsoPeripheral);
 
-        RWristConnection.Text = (Devices.DeviceRightWristPeripheral != null && Devices.IsDeviceRightWristConnected) ? "Connected" : "Disconnected";
-        LWristConnection.Text = (Devices.DeviceLeftWristPeripheral != null && Devices.IsDeviceLeftWristConnected) ? "Connected" : "Disconnected";
-        HipConnection.Text = (Devices.DeviceHipPeripheral != null && Devices.IsDeviceHipConnected) ? "Connected" : "Disconnected";
-        TorsoConnection.Text = (Devices.DeviceTorsoPeripheral != null && Devices.IsDeviceTorsoConnected) ? "Connected" : "Disconnected";
+        UpdateUI(() =>
+        {
+            RWristConnection.Text = (Devices.DeviceRightWristPeripheral != null && Devices.IsDeviceRightWristConnected) ? "Connected" : "Disconnected";
+            LWristConnection.Text = (Devices.DeviceLeftWristPeripheral != null && Devices.IsDeviceLeftWristConnected) ? "Connected" : "Disconnected";
+            HipConnection.Text = (Devices.DeviceHipPeripheral != null && Devices.IsDeviceHipConnected) ? "Connected" : "Disconnected";
+            TorsoConnection.Text = (Devices.DeviceTorsoPeripheral != null && Devices.IsDeviceTorsoConnected) ? "Connected" : "Disconnected";
+        });
     }
 
     protected override async void OnDisappearing()
@@ -167,6 +166,8 @@ public partial class Connect : ContentPage
         }
         _connectedDevices.Clear();
         _deviceToLogKeyMap.Clear();
+        _receivedPackets.Clear();
+        _deviceSamples.Clear();
         _activeSessionDoc = null;
     }
 
@@ -183,7 +184,7 @@ public partial class Connect : ContentPage
         catch (Exception ex)
         {
             Debug.WriteLine($"Error stopping scan: {ex.Message}");
-            ScanStatusLabel.Text = $"Error stopping scan: {ex.Message}";
+            UpdateUI(() => ScanStatusLabel.Text = $"Error stopping scan: {ex.Message}");
         }
     }
 
@@ -191,22 +192,22 @@ public partial class Connect : ContentPage
     {
         if (!await CheckPermissionsAsync())
         {
-            ScanStatusLabel.Text = "Permissions denied. Cannot scan.";
+            UpdateUI(() => ScanStatusLabel.Text = "Permissions denied. Cannot scan.");
             return;
         }
 
-        DevicesButtonStack.Children.Clear();
+        UpdateUI(() => DevicesButtonStack.Children.Clear());
         var seenDevices = new HashSet<string>();
         var cts = new CancellationTokenSource();
         cts.CancelAfter(TimeSpan.FromSeconds(5));
 
         try
         {
-            ScanStatusLabel.Text = "Scanning for devices...";
+            UpdateUI(() => ScanStatusLabel.Text = "Scanning for devices...");
 
             await _bleManager
                 .Scan()
-                .Where(result => result.Peripheral.Name?.Contains("Extropian") == true)
+                .Where(result => result.Peripheral.Name?.Contains(DEVICE_NAME) == true)
                 .ForEachAsync(async result =>
                 {
                     var macAddress = result.Peripheral.Uuid.ToString();
@@ -227,23 +228,23 @@ public partial class Connect : ContentPage
                         deviceButton.Clicked += (s, args) =>
                         {
                             _selectedDevice = result.Peripheral;
-                            ScanStatusLabel.Text = $"Selected device: {_selectedDevice.Name}";
+                            UpdateUI(() => ScanStatusLabel.Text = $"Selected device: {_selectedDevice.Name}");
                         };
 
-                        DevicesButtonStack.Children.Add(deviceButton);
+                        UpdateUI(() => DevicesButtonStack.Children.Add(deviceButton));
                     }
                 }, cts.Token);
 
-            ScanStatusLabel.Text = "Scan complete. Select a device, then a position.";
+            UpdateUI(() => ScanStatusLabel.Text = "Scan complete. Select a device, then a position.");
         }
         catch (OperationCanceledException)
         {
-            ScanStatusLabel.Text = "Scan complete.";
+            UpdateUI(() => ScanStatusLabel.Text = "Scan complete.");
         }
         catch (Exception ex)
         {
-            ScanStatusLabel.Text = $"Error scanning: {ex.Message}";
             Debug.WriteLine($"Error scanning: {ex.Message}");
+            UpdateUI(() => ScanStatusLabel.Text = $"Error scanning: {ex.Message}");
         }
         finally
         {
@@ -255,7 +256,7 @@ public partial class Connect : ContentPage
     {
         if (_selectedDevice == null)
         {
-            ScanStatusLabel.Text = "Please select a device first.";
+            UpdateUI(() => ScanStatusLabel.Text = "Please select a device first.");
             return;
         }
 
@@ -266,15 +267,17 @@ public partial class Connect : ContentPage
 
         bool success = await AssignAndConnectDeviceToPosition(_selectedDevice, _selectedPosition);
 
+        UpdateUI(() =>
+        {
+            ScanStatusLabel.Text = success
+                ? $"Device {_selectedDevice.Name} assigned to {_selectedPosition} and connected."
+                : $"Failed to connect device {_selectedDevice.Name} to {_selectedPosition}.";
+        });
+
         if (success)
         {
-            ScanStatusLabel.Text = $"Device {_selectedDevice.Name} assigned to {_selectedPosition} and connected.";
             _selectedDevice = null;
             _selectedPosition = null;
-        }
-        else
-        {
-            ScanStatusLabel.Text = $"Failed to connect device {_selectedDevice.Name} to {_selectedPosition}.";
         }
     }
 
@@ -290,45 +293,58 @@ public partial class Connect : ContentPage
                 case "Right Wrist":
                     Devices.DeviceRightWristPeripheral = device;
                     Devices.IsDeviceRightWristConnected = false;
-                    RWristMAC.Text = deviceId;
-                    RWristConnection.Text = "Connecting...";
-                    logKey = "Device1";
-                    _device1Id = deviceId;
+                    UpdateUI(() =>
+                    {
+                        RWristMAC.Text = deviceId;
+                        RWristConnection.Text = "Connecting...";
+                    });
+                    logKey = "DevRWristID";
+                    Devices.DeviceRightWristUUID = deviceId;
                     break;
 
                 case "Left Wrist":
                     Devices.DeviceLeftWristPeripheral = device;
                     Devices.IsDeviceLeftWristConnected = false;
-                    LWristMAC.Text = deviceId;
-                    LWristConnection.Text = "Connecting...";
-                    logKey = "Device2";
-                    _device2Id = deviceId;
+                    UpdateUI(() =>
+                    {
+                        LWristMAC.Text = deviceId;
+                        LWristConnection.Text = "Connecting...";
+                    });
+                    logKey = "DevLWristID";
+                    Devices.DeviceLeftWristUUID = deviceId;
                     break;
 
                 case "Hip Wrist":
                     Devices.DeviceHipPeripheral = device;
                     Devices.IsDeviceHipConnected = false;
-                    HipMAC.Text = deviceId;
-                    HipConnection.Text = "Connecting...";
-                    logKey = "Device3";
-                    _device3Id = deviceId;
+                    UpdateUI(() =>
+                    {
+                        HipMAC.Text = deviceId;
+                        HipConnection.Text = "Connecting...";
+                    });
+                    logKey = "DevHipID";
+                    Devices.DeviceHipUUID = deviceId;
                     break;
 
                 case "Torso Wrist":
                     Devices.DeviceTorsoPeripheral = device;
                     Devices.IsDeviceTorsoConnected = false;
-                    TorsoMAC.Text = deviceId;
-                    TorsoConnection.Text = "Connecting...";
-                    logKey = "Device4";
-                    _device4Id = deviceId;
+                    UpdateUI(() =>
+                    {
+                        TorsoMAC.Text = deviceId;
+                        TorsoConnection.Text = "Connecting...";
+                    });
+                    logKey = "DevTorsoID";
+                    Devices.DeviceTorsoUUID = deviceId;
                     break;
 
                 default:
                     return false;
             }
 
-            // Fixed: Store device-to-logKey mapping
             _deviceToLogKeyMap[deviceId] = logKey;
+            _receivedPackets.TryAdd(logKey, new ConcurrentBag<byte[]>());
+            _deviceSamples.TryAdd(logKey, new List<SensorSample>());
 
             for (int attempt = 1; attempt <= 3; attempt++)
             {
@@ -343,8 +359,8 @@ public partial class Connect : ContentPage
                 {
                     if (attempt == 3)
                     {
-                        ScanStatusLabel.Text = $"Connection failed after 3 attempts: {ex.Message}";
                         Debug.WriteLine($"Connection failed after 3 attempts: {ex.Message}");
+                        UpdateUI(() => ScanStatusLabel.Text = $"Connection failed after 3 attempts: {ex.Message}");
                         return false;
                     }
                     await Task.Delay(1000);
@@ -356,37 +372,38 @@ public partial class Connect : ContentPage
             await SetupNotifications(device, logKey);
             await StopImu(device);
 
-            switch (position)
+            UpdateUI(() =>
             {
-                case "Right Wrist":
-                    Devices.IsDeviceRightWristConnected = true;
-                    RWristConnection.Text = "Connected";
-                    break;
+                switch (position)
+                {
+                    case "Right Wrist":
+                        Devices.IsDeviceRightWristConnected = true;
+                        RWristConnection.Text = "Connected";
+                        break;
 
-                case "Left Wrist":
-                    Devices.IsDeviceLeftWristConnected = true;
-                    LWristConnection.Text = "Connected";
-                    break;
+                    case "Left Wrist":
+                        Devices.IsDeviceLeftWristConnected = true;
+                        LWristConnection.Text = "Connected";
+                        break;
 
-                case "Hip Wrist":
-                    Devices.IsDeviceHipConnected = true;
-                    HipConnection.Text = "Connected";
-                    break;
+                    case "Hip Wrist":
+                        Devices.IsDeviceHipConnected = true;
+                        HipConnection.Text = "Connected";
+                        break;
 
-                case "Torso Wrist":
-                    Devices.IsDeviceTorsoConnected = true;
-                    TorsoConnection.Text = "Connected";
-                    break;
-            }
-
-            await CheckAndStartSession();
+                    case "Torso Wrist":
+                        Devices.IsDeviceTorsoConnected = true;
+                        TorsoConnection.Text = "Connected";
+                        break;
+                }
+            });
 
             return true;
         }
         catch (Exception ex)
         {
-            ScanStatusLabel.Text = $"Error connecting device: {ex.Message}";
             Debug.WriteLine($"Error connecting device: {ex.Message}");
+            UpdateUI(() => ScanStatusLabel.Text = $"Error connecting device: {ex.Message}");
             return false;
         }
     }
@@ -400,8 +417,8 @@ public partial class Connect : ContentPage
         }
         catch (Exception ex)
         {
-            ScanStatusLabel.Text = $"Error resetting clock: {ex.Message}";
             Debug.WriteLine($"Error resetting clock: {ex.Message}");
+            UpdateUI(() => ScanStatusLabel.Text = $"Error resetting clock: {ex.Message}");
         }
     }
 
@@ -414,8 +431,8 @@ public partial class Connect : ContentPage
         }
         catch (Exception ex)
         {
-            ScanStatusLabel.Text = $"Error stopping IMU: {ex.Message}";
             Debug.WriteLine($"Error stopping IMU: {ex.Message}");
+            UpdateUI(() => ScanStatusLabel.Text = $"Error stopping IMU: {ex.Message}");
         }
     }
 
@@ -440,8 +457,8 @@ public partial class Connect : ContentPage
         }
         catch (Exception ex)
         {
-            ScanStatusLabel.Text = $"Error setting up notifications: {ex.Message}";
             Debug.WriteLine($"Error setting up notifications: {ex.Message}");
+            UpdateUI(() => ScanStatusLabel.Text = $"Error setting up notifications: {ex.Message}");
         }
     }
 
@@ -453,30 +470,6 @@ public partial class Connect : ContentPage
             return;
         }
 
-        // Fixed: Create session only if it doesn't exist
-        if (_activeSessionDoc == null)
-        {
-            // Force session creation with retries
-            for (int attempt = 1; attempt <= 3; attempt++)
-            {
-                await CheckAndStartSession();
-                if (_activeSessionDoc != null)
-                    break;
-                Debug.WriteLine($"Session creation attempt {attempt} failed. Retrying...");
-                await Task.Delay(1000);
-            }
-
-            if (_activeSessionDoc == null)
-            {
-                ScanStatusLabel.Text = "Error: Failed to create Firestore session after retries.";
-                Debug.WriteLine("Failed to create Firestore session after 3 attempts.");
-                return;
-            }
-        }
-
-        // Process any queued packets
-        await ProcessQueuedPackets();
-
         await StartImu();
     }
 
@@ -487,42 +480,44 @@ public partial class Connect : ContentPage
             try
             {
                 await ResetClocks(device);
-                //await Task.Delay(20);
                 var commandChar = await device.GetCharacteristicAsync(_serviceUuid, _commandCharUuid, CancellationToken.None);
                 await device.WriteCharacteristicAsync(commandChar, new byte[] { 0x01 }, false);
             }
             catch (Exception ex)
             {
-                ScanStatusLabel.Text = $"Error starting IMU: {ex.Message}";
                 Debug.WriteLine($"Error starting IMU: {ex.Message}");
+                UpdateUI(() => ScanStatusLabel.Text = $"Error starting IMU: {ex.Message}");
             }
         }
     }
 
     private void StorePacket(string deviceId, byte[] data, string logKey)
     {
+        if (!_receivedPackets.ContainsKey(logKey))
+        {
+            _receivedPackets.TryAdd(logKey, new ConcurrentBag<byte[]>());
+        }
+
         _receivedPackets[logKey].Add(data);
         Debug.WriteLine($"Stored packet for {logKey}: {data.Length} bytes (Total: {_receivedPackets[logKey].Count})");
 
-        // Fixed: Only upload to Firestore if we have an active session
-        if (_activeSessionDoc != null)
-        {
-            // Use async method but don't await to avoid blocking the notification callback
-            Task.Run(() => UploadSamplesToFirestoreAsync(deviceId, data, logKey));
-        }
-        else
-        {
-            Debug.WriteLine($"No active session - packet stored for later processing");
-        }
-
         if (_receivedPackets[logKey].Count >= EXPECTED_PACKET_COUNT)
         {
-            Task.Run(() => ParsePackets(logKey));
+            Task.Run(async () =>
+            {
+                ParsePackets(logKey);
+                await TryUploadToFirestoreAsync();
+            });
         }
     }
 
     private void ParsePackets(string logKey)
     {
+        if (!_deviceSamples.ContainsKey(logKey))
+        {
+            _deviceSamples.TryAdd(logKey, new List<SensorSample>());
+        }
+
         var samples = _deviceSamples[logKey];
         samples.Clear();
 
@@ -530,228 +525,12 @@ public partial class Connect : ContentPage
         {
             if (data.Length != 221)
             {
-                Debug.WriteLine($"Invalid packet length: {data.Length} bytes");
+                Debug.WriteLine($"Invalid packet length for {logKey}: {data.Length} bytes");
                 continue;
             }
 
             int offset = 0;
             byte packetNum = data[offset++];
-
-            for (int s = 0; s < 5; s++)
-            {
-                if (data[offset++] != (byte)'A')
-                {
-                    Debug.WriteLine("Invalid packet format: Missing 'A' marker");
-                    return;
-                }
-
-                uint ts = BitConverter.ToUInt32(data, offset);
-                offset += 4;
-
-                if (data[offset++] != (byte)'B')
-                {
-                    Debug.WriteLine("Invalid packet format: Missing 'B' marker");
-                    return;
-                }
-
-                float ax = BitConverter.ToSingle(data, offset);
-                float ay = BitConverter.ToSingle(data, offset + 4);
-                float az = BitConverter.ToSingle(data, offset + 8);
-                offset += 12;
-
-                if (data[offset++] != (byte)'C')
-                {
-                    Debug.WriteLine("Invalid packet format: Missing 'C' marker");
-                    return;
-                }
-
-                float gx = BitConverter.ToSingle(data, offset);
-                float gy = BitConverter.ToSingle(data, offset + 4);
-                float gz = BitConverter.ToSingle(data, offset + 8);
-                offset += 12;
-
-                if (data[offset++] != (byte)'D')
-                {
-                    Debug.WriteLine("Invalid packet format: Missing 'D' marker");
-                    return;
-                }
-
-                float mx = BitConverter.ToSingle(data, offset);
-                float my = BitConverter.ToSingle(data, offset + 4);
-                float mz = BitConverter.ToSingle(data, offset + 8);
-                offset += 12;
-
-                samples.Add(new SensorSample
-                {
-                    Timestamp = ts,
-                    AccelX = ax,
-                    AccelY = ay,
-                    AccelZ = az,
-                    GyroX = gx,
-                    GyroY = gy,
-                    GyroZ = gz,
-                    MagX = mx,
-                    MagY = my,
-                    MagZ = mz
-                });
-            }
-        }
-        _receivedPackets[logKey] = new ConcurrentBag<byte[]>();
-    }
-
-    private async void HandleThreshold(string deviceId, byte[] data)
-    {
-        if (data.Length > 0 && data[0] == 0x05)
-        {
-            await Task.Delay(1000);
-            await TriggerFreezeOnAll(deviceId);
-        }
-    }
-
-    private async Task TriggerFreezeOnAll(string triggeredDeviceId)
-    {
-        await Task.WhenAll(_connectedDevices.Values.Select(async device =>
-        {
-            try
-            {
-                var commandChar = await device.GetCharacteristicAsync(_serviceUuid, _commandCharUuid, CancellationToken.None);
-                await device.WriteCharacteristicAsync(commandChar, new byte[] { 0x03 }, false);
-            }
-            catch (Exception ex)
-            {
-                ScanStatusLabel.Text = $"Error triggering freeze: {ex.Message}";
-                Debug.WriteLine($"Error triggering freeze: {ex.Message}");
-            }
-        }));
-
-        await Task.Delay(50);
-
-        // Fixed: Use the mapping to get correct logKey for each device
-        var devicesWithKeys = _connectedDevices.Keys.Select(deviceId =>
-        {
-            var logKey = _deviceToLogKeyMap.GetValueOrDefault(deviceId, "Unknown");
-            return (deviceId, logKey);
-        }).Where(d => d.logKey != "Unknown").ToList();
-
-        await Task.WhenAll(devicesWithKeys.Select(d => SendQueueFromDevice(d.deviceId, d.logKey)));
-    }
-
-    private async Task SendQueueFromDevice(string deviceId, string logKey)
-    {
-        var device = _connectedDevices[deviceId];
-        try
-        {
-            var commandChar = await device.GetCharacteristicAsync(_serviceUuid, _commandCharUuid, CancellationToken.None);
-            await device.WriteCharacteristicAsync(commandChar, new byte[] { 0x04 }, false);
-
-            for (int i = 0; i < 10; i++)
-            {
-                if (_receivedPackets[logKey].Count >= EXPECTED_PACKET_COUNT)
-                    break;
-                await Task.Delay(10);
-            }
-        }
-        catch (Exception ex)
-        {
-            ScanStatusLabel.Text = $"Error sending queue: {ex.Message}";
-            Debug.WriteLine($"Error sending queue: {ex.Message}");
-        }
-    }
-
-    private async Task StartNewFirestoreSession(string deviceId1, string deviceId2, string deviceId3 = null, string deviceId4 = null)
-    {
-        try
-        {
-            var firestore = CrossCloudFirestore.Current.Instance;
-
-            var sessionData = new Dictionary<string, object>
-            {
-                { "device1Id", deviceId1 },
-                { "device2Id", deviceId2 },
-                { "device3Id", deviceId3 ?? string.Empty },
-                { "device4Id", deviceId4 ?? string.Empty },
-                { "startTime", DateTime.UtcNow },
-                { "device1Samples", new List<object>() },
-                { "device2Samples", new List<object>() }
-            };
-
-            if (deviceId3 != null)
-                sessionData["device3Samples"] = new List<object>();
-            if (deviceId4 != null)
-                sessionData["device4Samples"] = new List<object>();
-
-            var sessionDoc = await firestore
-                .Collection("imu_sessions")
-                .AddAsync(sessionData);
-
-            _activeSessionDoc = sessionDoc;
-            Debug.WriteLine($"Firestore session created with ID: {sessionDoc.Id}");
-        }
-        catch (Exception ex)
-        {
-            ScanStatusLabel.Text = $"Error starting Firestore session: {ex.Message}";
-            Debug.WriteLine($"Error starting Firestore session: {ex.Message} (StackTrace: {ex.StackTrace})");
-        }
-    }
-
-    private async Task ProcessQueuedPackets()
-    {
-        if (_activeSessionDoc == null)
-        {
-            Debug.WriteLine("No active session for processing queued packets.");
-            return;
-        }
-
-        Debug.WriteLine($"Processing queued packets for {_receivedPackets.Count} devices");
-
-        foreach (var kvp in _receivedPackets)
-        {
-            var logKey = kvp.Key;
-            var packets = kvp.Value;
-
-            var deviceId = logKey switch
-            {
-                "Device1" => _device1Id,
-                "Device2" => _device2Id,
-                "Device3" => _device3Id,
-                "Device4" => _device4Id,
-                _ => null
-            };
-
-            if (deviceId == null)
-                continue;
-
-            Debug.WriteLine($"Processing {packets.Count} queued packets for {logKey} (device: {deviceId})");
-
-            while (packets.TryTake(out var packet))
-            {
-                Debug.WriteLine($"Processing queued packet for {logKey}: {packet.Length} bytes");
-                await UploadSamplesToFirestoreAsync(deviceId, packet, logKey);
-            }
-        }
-    }
-
-    private async Task UploadSamplesToFirestoreAsync(string deviceId, byte[] data, string logKey)
-    {
-        if (_activeSessionDoc == null)
-        {
-            Debug.WriteLine($"No active Firestore session for {logKey}. Skipping upload.");
-            return;
-        }
-
-        if (data.Length != 221)
-        {
-            Debug.WriteLine($"Invalid packet length for {logKey}: {data.Length} bytes");
-            return;
-        }
-
-        try
-        {
-            var samples = new List<object>();
-            int offset = 0;
-            byte packetNum = data[offset++];
-
-            Debug.WriteLine($"Parsing packet {packetNum} for {logKey}");
 
             for (int s = 0; s < 5; s++)
             {
@@ -817,66 +596,201 @@ public partial class Connect : ContentPage
                 float mz = BitConverter.ToSingle(data, offset + 8);
                 offset += 12;
 
-                // Validate sample data
-                if (float.IsNaN(ax) || float.IsNaN(ay) || float.IsNaN(az) ||
-                    float.IsNaN(gx) || float.IsNaN(gy) || float.IsNaN(gz) ||
-                    float.IsNaN(mx) || float.IsNaN(my) || float.IsNaN(mz))
+                samples.Add(new SensorSample
                 {
-                    Debug.WriteLine($"Invalid sample data for {logKey} at sample {s}: Contains NaN values");
-                    return;
-                }
-
-                samples.Add(new
-                {
-                    timestamp = ts,
-                    accel = new { x = ax, y = ay, z = az },
-                    gyro = new { x = gx, y = gy, z = gz },
-                    mag = new { x = mx, y = my, z = mz }
+                    Timestamp = ts,
+                    AccelX = ax,
+                    AccelY = ay,
+                    AccelZ = az,
+                    GyroX = gx,
+                    GyroY = gy,
+                    GyroZ = gz,
+                    MagX = mx,
+                    MagY = my,
+                    MagZ = mz
                 });
             }
+        }
 
-            if (samples.Count != 5)
+        Debug.WriteLine($"Parsed {samples.Count} samples for {logKey}");
+        _receivedPackets[logKey] = new ConcurrentBag<byte[]>();
+    }
+
+    private async void HandleThreshold(string deviceId, byte[] data)
+    {
+        if (data.Length > 0 && data[0] == 0x05)
+        {
+            await Task.Delay(1000);
+            await TriggerFreezeOnAll(deviceId);
+        }
+    }
+
+    private async Task TriggerFreezeOnAll(string triggeredDeviceId)
+    {
+        await Task.WhenAll(_connectedDevices.Values.Select(async device =>
+        {
+            try
             {
-                Debug.WriteLine($"Invalid sample count for {logKey}: Expected 5, got {samples.Count}");
-                return;
+                var commandChar = await device.GetCharacteristicAsync(_serviceUuid, _commandCharUuid, CancellationToken.None);
+                await device.WriteCharacteristicAsync(commandChar, new byte[] { 0x03 }, false);
             }
-
-            string fieldName = deviceId == _device1Id ? "device1Samples" :
-                               deviceId == _device2Id ? "device2Samples" :
-                               deviceId == _device3Id ? "device3Samples" :
-                               deviceId == _device4Id ? "device4Samples" : null;
-            if (fieldName == null)
+            catch (Exception ex)
             {
-                Debug.WriteLine($"Unknown device ID for {logKey}: {deviceId}");
-                return;
+                Debug.WriteLine($"Error triggering freeze: {ex.Message}");
+                UpdateUI(() => ScanStatusLabel.Text = $"Error triggering freeze: {ex.Message}");
             }
+        }));
 
-            Debug.WriteLine($"Preparing to upload {samples.Count} samples to Firestore for {fieldName}");
-            await _activeSessionDoc.UpdateAsync(fieldName, FieldValue.ArrayUnion(samples.ToArray()));
-            Debug.WriteLine($"Successfully uploaded {samples.Count} samples to Firestore for {fieldName}");
+        await Task.Delay(50);
+
+        var devicesWithKeys = _connectedDevices.Keys.Select(deviceId =>
+        {
+            var logKey = _deviceToLogKeyMap.GetValueOrDefault(deviceId, "Unknown");
+            return (deviceId, logKey);
+        }).Where(d => d.logKey != "Unknown").ToList();
+
+        await Task.WhenAll(devicesWithKeys.Select(d => SendQueueFromDevice(d.deviceId, d.logKey)));
+    }
+
+    private async Task SendQueueFromDevice(string deviceId, string logKey)
+    {
+        var device = _connectedDevices[deviceId];
+        try
+        {
+            var commandChar = await device.GetCharacteristicAsync(_serviceUuid, _commandCharUuid, CancellationToken.None);
+            await device.WriteCharacteristicAsync(commandChar, new byte[] { 0x04 }, false);
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (_receivedPackets[logKey].Count >= EXPECTED_PACKET_COUNT)
+                {
+                    ParsePackets(logKey);
+                    await TryUploadToFirestoreAsync();
+                    break;
+                }
+                await Task.Delay(10);
+            }
         }
         catch (Exception ex)
         {
-            ScanStatusLabel.Text = $"Error uploading to Firestore for {logKey}: {ex.Message}";
-            Debug.WriteLine($"Error uploading to Firestore for {logKey}: {ex.Message} (StackTrace: {ex.StackTrace})");
+            Debug.WriteLine($"Error sending queue: {ex.Message}");
+            UpdateUI(() => ScanStatusLabel.Text = $"Error sending queue: {ex.Message}");
         }
+    }
+
+    private async Task TryUploadToFirestoreAsync()
+    {
+        // Check if all connected devices have parsed data
+        var devicesWithKeys = _connectedDevices.Keys.Select(deviceId =>
+        {
+            var logKey = _deviceToLogKeyMap.GetValueOrDefault(deviceId, "Unknown");
+            return (deviceId, logKey);
+        }).Where(d => d.logKey != "Unknown").ToList();
+
+        bool allDevicesReady = devicesWithKeys.All(d => _deviceSamples.ContainsKey(d.logKey) && _deviceSamples[d.logKey].Count >= EXPECTED_PACKET_COUNT * 5);
+
+        if (!allDevicesReady || _activeSessionDoc != null)
+        {
+            Debug.WriteLine($"Not uploading to Firestore: All devices not ready ({devicesWithKeys.Count}/{_connectedDevices.Count}) or session already created.");
+            return;
+        }
+
+        try
+        {
+            var firestore = CrossCloudFirestore.Current.Instance;
+
+            var sessionData = new Dictionary<string, object>
+            {
+                { "DevRWristID", Devices.DeviceRightWristUUID ?? string.Empty },
+                { "DevLWristID", Devices.DeviceLeftWristUUID ?? string.Empty },
+                { "DevHipID", Devices.DeviceHipUUID ?? string.Empty },
+                { "DevTorsoID", Devices.DeviceTorsoUUID ?? string.Empty },
+                { "startTime", DateTime.UtcNow }
+            };
+
+            foreach (var (deviceId, logKey) in devicesWithKeys)
+            {
+                var fieldName = logKey switch
+                {
+                    "DevRWristID" => "DevRWrist",
+                    "DevLWristID" => "DevLWrist",
+                    "DevHipID" => "DevHip",
+                    "DevTorsoID" => "DevTorso",
+                    _ => null
+                };
+
+                if (fieldName == null) continue;
+
+                var samples = _deviceSamples[logKey].Select(s => new
+                {
+                    timestamp = s.Timestamp,
+                    accel = new { x = s.AccelX, y = s.AccelY, z = s.AccelZ },
+                    gyro = new { x = s.GyroX, y = s.GyroY, z = s.GyroZ },
+                    mag = new { x = s.MagX, y = s.MagY, z = s.MagZ }
+                }).ToList();
+
+                sessionData[fieldName] = samples;
+            }
+
+            var docRef = firestore
+                .Collection("imu_sessions")
+                .Document(DateTime.Now.ToString("yyyyMMdd_HHmmss"));
+
+            await docRef.SetAsync(sessionData);
+
+
+
+            _activeSessionDoc = docRef;
+            Debug.WriteLine($"Firestore session created with ID: {docRef.Id}");
+            UpdateUI(() => ScanStatusLabel.Text = "Data uploaded to Firestore successfully.");
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Error uploading to Firestore: {ex.Message} (StackTrace: {ex.StackTrace})");
+            UpdateUI(() => ScanStatusLabel.Text = $"Error uploading to Firestore: {ex.Message}");
+        }
+    }
+
+    private async Task ProcessQueuedPackets()
+    {
+        foreach (var kvp in _receivedPackets)
+        {
+            var logKey = kvp.Key;
+            var packets = kvp.Value;
+
+            var deviceId = logKey switch
+            {
+                "DevRWristID" => Devices.DeviceRightWristUUID, // Fixed: Corrected typo
+                "DevLWristID" => Devices.DeviceLeftWristUUID,
+                "DevHipID" => Devices.DeviceHipUUID,
+                "DevTorsoID" => Devices.DeviceTorsoUUID,
+                _ => null
+            };
+
+            if (deviceId == null)
+            {
+                Debug.WriteLine($"Unknown log key: {logKey}");
+                continue;
+            }
+
+            Debug.WriteLine($"Processing {packets.Count} queued packets for {logKey} (device: {deviceId})");
+
+            while (packets.TryTake(out var packet))
+            {
+                Debug.WriteLine($"Processing queued packet for {logKey}: {packet.Length} bytes");
+                ParsePackets(logKey);
+            }
+        }
+
+        await TryUploadToFirestoreAsync();
     }
 
     private async Task CheckAndStartSession()
     {
-        if (_connectedDevices.Count >= 2 && _activeSessionDoc == null)
-        {
-            var deviceIds = _connectedDevices.Keys.ToList();
-
-            // Fixed: Use the stored device IDs instead of assuming order
-            if (_device1Id == null && deviceIds.Count > 0) _device1Id = deviceIds[0];
-            if (_device2Id == null && deviceIds.Count > 1) _device2Id = deviceIds[1];
-            if (_device3Id == null && deviceIds.Count > 2) _device3Id = deviceIds[2];
-            if (_device4Id == null && deviceIds.Count > 3) _device4Id = deviceIds[3];
-
-            await StartNewFirestoreSession(_device1Id, _device2Id, _device3Id, _device4Id);
-        }
+        // No longer creates session immediately
+        Debug.WriteLine("Session creation delayed until all devices have parsed data.");
     }
+}
 
     //// Fixed: Remove the duplicate synchronous method
     //private async void UploadSamplesToFirestore(string deviceId, byte[] data, string logKey)
@@ -1037,5 +951,5 @@ public partial class Connect : ContentPage
     //        Debug.WriteLine($"No active session or no valid samples for {logKey}. Skipping upload.");
     //    }
     //}
-}
+
 

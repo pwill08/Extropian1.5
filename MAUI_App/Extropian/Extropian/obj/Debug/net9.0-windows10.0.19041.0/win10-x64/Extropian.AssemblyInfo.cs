@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Extropian")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+cc25648d3a7d577b93ece34278d3e1c20159b702")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+95772baba926fd6278e6322fb144d01080b67f5c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Extropian")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Extropian")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
